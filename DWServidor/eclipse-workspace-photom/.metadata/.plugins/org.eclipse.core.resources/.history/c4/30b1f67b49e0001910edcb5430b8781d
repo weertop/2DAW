@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!
+	int hora;
+   
+	Random rd=new Random();
+	%>
+<%
+	hora=rd.nextInt(10);
+	if (l > 8 && l < 15){
+		out.print("hola son las "+l +" y seguimos trabajando ");
+	} else 	if (l == 8){
+		out.print(" hola son las 8 de la mañana empieza mi jornada ");
+	}else {
+		out.print("adios se acabó la jornada porque son las "+l);
+	}
+%>
+</body>
+</html>

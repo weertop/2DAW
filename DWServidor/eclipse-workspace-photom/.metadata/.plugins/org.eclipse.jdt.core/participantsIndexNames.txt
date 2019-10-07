@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\alexc\eclipse-workspace-photom\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4193584177.index
+\prueba1\src
+C:\Users\alexc\eclipse-workspace-photom\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\332862995.index
+\Formularios\src
+C:\Users\alexc\eclipse-workspace-photom\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3981461726.index
+\t0curso\src

@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String nombre = request.getParameter("nombre"); //debe coincidir con el atributo name en el form
+		String color = request.getParameter("color");
+		String correo = request.getParameter("correo");
+	%>
+	<table border="1">
+		<tr>
+			<td>Nombre:</td>
+			<td>Color:</td>
+			<td>Correo:</td>
+		</tr>
+		<tr>
+			<td><%=nombre %>:</td>
+			<td><%=color %></td>
+			<td><%=correo %></td>
+		</tr>
+	
+	
+	</table>
+</body>
+</html>

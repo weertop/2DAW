@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="destinoHotel" method="post">
+		<p>Nombre: <input type="text" name="nombre"/></p>
+		<p>DNI: <input type="text" name="dni"/></p>
+		<p>Numero de dias: <input type="number" name="dias"/></p>
+		<input type="radio" name="tipo" value="alojamiento"/><br/>
+		<input type="radio" name="tipo" value="aloydesayuno"/><br/>
+		<input type="checkbox" name="parking" value="parking" /></br>
+		<input type="checkbox" name="gym" value="gym" /></br>
+	</form>
+</body>
+</html>

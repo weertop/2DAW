@@ -1,0 +1,28 @@
+12:31 16/09/2019
+Mercedes
+
+apache tomcat para java
+apache para php
+
+xampp
+
+necesitamos tomcast 7 como minimo se usa con java 8
+------------------------------------------
+Examenes: 2 valen 80% minimo un 5
+Trabajos: 20% obligatorios
+
+-------------------------------------------
+Desarrollo web enterono servidor RAMA GACETA
+
+------------------------------------
+10.12.0.253	M	nopass	
+
+---------------------------------------
+nombre: JAVA_HOME
+valor:	Examinar->c->archivos de programa->Java->JDk
+
+y luego editar el PATH -> añadir -> nuevo -> %JAVA_HOME%\bin
+
+-----------------------------------------------------
+
+<!-- input type="text" name="saldo" value="<porc =sueldo porc>" readonly -->

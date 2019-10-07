@@ -1,0 +1,3 @@
+<%! %> variable de instancia "casi como variable global" java la puede usar donde quiera ya que la almacena en un lugar especial
+<%@ %> asignar directivas
+

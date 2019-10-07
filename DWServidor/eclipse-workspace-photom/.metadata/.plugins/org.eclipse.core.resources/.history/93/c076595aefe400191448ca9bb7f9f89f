@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*, java.text.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<% 
+		Date fecha = new Date();
+		String fechaFormato = "hh:mm:ss dd-MM-yyyy";
+		SimpleDateFormat obj = new SimpleDateFormat(fechaFormato);
+		out.println();
+	
+	%>
+</body>
+</html>

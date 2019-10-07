@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>El primer script</title>
+
+<script type="text/javascript">
+    var saludo= "Hola Mundo!\nQue facil es incluir 'comillas simples' \ny \"comillas dobles\"" 
+    var arrayDias = ["lunes","martes","miercoles","jueves","viernes"];
+    var arrayNumeros = [1,2,3,4,6,7,8];
+    arrayDias.push("sabado");
+    arrayDias.pop();
+    console.log(arrayDias);
+    arrayDias.forEach(function(valor, indice, array){
+        alert(valor + " " + indice++);
+    });
+    /*for(var i=0;i<arrayDias.length;i++){
+        alert(arrayDias[i]);
+    }*/
+    alert(saludo);
+</script>
+</head>
+
+<body>
+<p>Esta página contiene el primer script</p>
+</body>
+</html>

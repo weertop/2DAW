@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 1</title>
+	<meta charset="utf-8">
+	<script>
+		
+		var nombre = [];
+		var edad = [];
+		var mayor = 0;
+		var menor = 999;
+		var nombreDelMayor;
+		var nombreDelMenor;
+
+		var numeroPersonas = prompt("Cuantas personas?");
+
+		for(var i = 0; i < numeroPersonas; i++){
+			nombre[i] = prompt("Nombre de persona " + (i+1));
+			edad[i] = prompt("Edad de "  + nombre[i]);
+
+			if(edad[i] > mayor){
+				mayor = edad[i];
+				nombreDelMayor = nombre[i];
+			}
+
+			if(edad[i] < menor){
+				menor = edad[i];
+				nombreDelMenor = nombre[i];
+			}
+		}
+		
+		alert("El mayor es " + nombreDelMayor + " y tiene " + mayor + " años. \nEl menor es " + nombreDelMenor + " y tiene " + menor + " años.");
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

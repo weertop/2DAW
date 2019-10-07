@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>El primer script</title>
+
+  <script type="text/javascript">
+  function howMany(selectObject) {
+    var numberSelected = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
+    }
+    return numberSelected;
+  }
+  
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function(){
+    alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
+  });
+  </script>
+
+</head>
+
+<body>
+<p>Esta página contiene el primer script</p>
+<form name="selectForm">
+    <p>
+      <label for="musicTypes">Choose some music types, then click the button below:</label>
+      <select id="musicTypes" name="musicTypes" multiple="multiple">
+        <option selected="selected">R&B</option>
+        <option>Jazz</option>
+        <option>Blues</option>
+        <option>New Age</option>
+        <option>Classical</option>
+        <option>Opera</option>
+      </select>
+    </p>
+    <p><input id="btn" type="button" value="How many are selected?" /></p>
+  </form>
+</body>
+</html>

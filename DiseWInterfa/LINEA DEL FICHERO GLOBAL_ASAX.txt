@@ -1,0 +1,4 @@
+ValidationSettings.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+
+validator DNI:
+\d{8}[a-zA-Z]{1}

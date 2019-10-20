@@ -5,7 +5,75 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title></title>
 	<script type="text/javascript">
-	
+		window.onload = function(){
+			document.getElementById("play").onclick = iniciar;
+
+			document.getElementById("stop").onclick = final;
+
+			var segBoton = document.getElementsByName("b");
+			for(var i=0;i<segBoton.length;i++){
+				segBoton[i].onclick = mostarImg;
+			}
+
+			var images = document.getElementsByName("ima");
+			for(var i=0;i<images.length;i++){
+				images[i].onclick = mostrarRuta;
+			}
+
+		}
+
+		function iniciar(){
+			var botones = document.getElementsByTagName("input");
+			var imagenes = document.getElementsByTagName("img");
+			for(var i=0;i<botones.length;i++){
+					botones[i].disabled = false;
+			}
+			for(var i=0;i<imagenes.length;i++){
+				imagenes[i].disabled= false;
+			}
+			document.getElementById("play").disabled = true;
+		}
+
+		function final(){
+			var botones = document.getElementsByTagName("input");
+			var imagenes = document.getElementsByTagName("img");
+			for(var i=0;i<botones.length;i++){
+				botones[i].disabled = true;
+				if(botones[i].name == "texto")
+					botones[i].value = " ";
+			}
+			for(var i=0;i<imagenes.length;i++){
+				imagenes[i].style.display = 'none';
+			}
+			document.getElementById("play").disabled = false;
+		}
+
+		function mostarImg(){
+			//console.log(this.getAttribute("id").toString());
+			switch(this.id){
+				case "boton1": document.getElementById("img1").style.display = "inline";
+								break;
+				case "boton2": document.getElementById("img2").style.display = "inline";
+								break;
+				case "boton3": document.getElementById("img3").style.display = "inline";
+								break;
+			}
+		}
+
+		function mostrarRuta(){
+
+			//document.getElementById("text1").value = this.src.toString();
+			switch(this.id){
+				case "img1": document.getElementById("text1").value = this.src;
+					break;
+				case "img2": document.getElementById("text2").value = this.src;
+					break;
+				case "img3": document.getElementById("text3").value = this.src;
+					break;
+			}
+		}
+
+
 	
 	</script>
 	</head>

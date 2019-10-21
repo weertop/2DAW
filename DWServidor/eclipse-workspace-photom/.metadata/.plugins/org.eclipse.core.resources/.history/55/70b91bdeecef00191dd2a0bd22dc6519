@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*,java.text.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!													//ojo a el tipo es !
+public static int[] sacaCalendar(Calendar f){
+		int[] fechaHora = new int[6];
+		fechaHora[0] = f.get(Calendar.YEAR);
+		fechaHora[1] = f.get(Calendar.MONTH); // el mes es un array de 0 a 11 por eso se debe arreglar
+		fechaHora[2] = f.get(Calendar.DAY_OF_MONTH);
+		fechaHora[3] = f.get(Calendar.HOUR_OF_DAY);
+		fechaHora[4] = f.get(Calendar.MINUTE);
+		fechaHora[5] = f.get(Calendar.SECOND);
+		return fechaHora;
+}
+%>
+<%
+	Calendar f1 = Calendar.getInstance();
+	
+%>
+<p>Fecha actual</p>
+<table border="1">
+	<tr>
+		<td>Año</td>
+		<td>Mes</td>
+		<td>Dia</td>
+		<td>Hora</td>
+		<td>Minutos</td>
+		<td>Segundos</td>
+	</tr>
+<% int[] actual = sacaCalendar(f1); %>
+	<tr>
+		<td><%=actual[0]%></td>
+		<td>Mes</td>
+		<td>Dia</td>
+		<td>Hora</td>
+		<td>Minutos</td>
+		<td>Segundos</td>
+	</tr>
+</table>
+</body>
+</html>

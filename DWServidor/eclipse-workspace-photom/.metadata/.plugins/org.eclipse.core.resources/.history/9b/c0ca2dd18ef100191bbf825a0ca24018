@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String[] tamanio = {"50px","100px","200px"};
+		String[] tamPalabras = {"pequeño","mediano","grande"};
+		int posicionX = 10;
+		//int posicionY = 0;
+		Random rd = new Random();
+		int tamAleatorioPalabra = rd.nextInt(3);
+		String tamElegidoPalabra = tamanio[tamAleatorioPalabra];
+		
+		for(int i=0; i<3 ; i++, posicionX+=10){
+			int tamAleatorio = rd.nextInt(3);
+			String tamElegido = tamanio[tamAleatorio];
+	%>
+			<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
+			<rect x="<%=posicionX%>" y="50" width="<%=tamElegido%>" height="<%=tamElegido%>" stroke="green" stroke-width=2 fill="red"/>
+			</svg>
+		<%
+		} 
+		%>
+		<p>Selecciona el de tamaño:<%= %></p>
+	
+	
+</body>
+</html>

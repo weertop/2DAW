@@ -1,0 +1,172 @@
+
+oct. 11, 2019 09:12:55.55 NEW SESSION
+oct. 11, 2019 09:12:55.55 [13276:8724:1011/091255.554:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 11, 2019 09:38:26.24 [23564:25180:1011/093826.244:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 11, 2019 09:39:39.10 [22364:25072:1011/093939.108:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 15, 2019 08:14:51.19 NEW SESSION
+oct. 15, 2019 08:14:51.20 [13648:19844:1015/081451.195:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:14:56.40 [13648:17452:1015/081456.402:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:18:57.62 [4684:17200:1015/081857.620:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:18:59.09 [4684:4644:1015/081859.090:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:19:28.27 [4684:4644:1015/081928.272:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:19:30.25 [4684:5628:1015/081930.251:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:19:30.43 [4684:5628:1015/081930.435:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:19:31.16 [4684:5628:1015/081931.161:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:20:26.42 [4684:4644:1015/082026.421:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:21:52.50 [4684:4644:1015/082152.499:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:25:45.41 [4684:4644:1015/082545.417:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:36:07.54 [4684:5628:1015/083607.543:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 08:36:08.39 [4684:4644:1015/083608.392:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:36:30.74 [4684:5628:1015/083630.749:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 08:37:26.76 [4684:5628:1015/083726.768:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 08:38:54.39 [4684:5628:1015/083854.395:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 08:40:41.52 [12548:19716:1015/084041.525:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:40:44.88 [12548:8116:1015/084044.880:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:42:31.88 [12368:16132:1015/084231.887:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:42:34.41 [12368:9068:1015/084234.411:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:43:00.16 [12368:9068:1015/084300.163:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:43:04.24 [12368:17488:1015/084304.246:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:43:05.38 [12368:17488:1015/084305.379:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:43:05.66 [12368:17488:1015/084305.659:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:43:16.50 [17872:11320:1015/084316.504:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:43:21.88 [17872:17828:1015/084321.882:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:43:55.55 [16832:13156:1015/084355.559:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:43:58.84 [16832:14528:1015/084358.848:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:44:19.48 [16832:14528:1015/084419.479:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:48:24.23 [5656:8932:1015/084824.231:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 15, 2019 08:48:34.53 [5656:19220:1015/084834.529:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:48:57.10 [5656:5320:1015/084857.107:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:48:57.66 [5656:5320:1015/084857.665:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:48:58.88 [5656:5320:1015/084858.887:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 15, 2019 08:49:01.83 [5656:19220:1015/084901.837:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:49:46.83 [5656:19220:1015/084946.832:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:51:23.75 [5656:19220:1015/085123.754:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 15, 2019 08:51:34.10 [5656:5320:1015/085134.108:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 08:52:00.81 [5656:5320:1015/085200.819:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 08:52:44.88 [5656:5320:1015/085244.880:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 15, 2019 10:09:13.94 [2428:9484:1015/100913.939:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 16, 2019 10:15:16.67 NEW SESSION
+oct. 16, 2019 10:15:16.68 [19408:23360:1016/101516.677:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 16, 2019 10:23:19.81 [396:20164:1016/102319.812:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 16, 2019 10:33:18.91 [17228:21800:1016/103318.916:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 16, 2019 10:46:25.11 [17228:17684:1016/104625.116:ERROR:socket_stream.cc(219)] Closing stream with result -2
+oct. 16, 2019 11:15:40.41 [17228:17684:1016/111540.418:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 16, 2019 11:22:47.12 [17228:17684:1016/112247.124:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 16, 2019 11:25:39.29 [19504:20032:1016/112539.294:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 16, 2019 11:46:18.08 [22628:2768:1016/114618.081:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 16, 2019 12:52:07.03 [19556:5480:1016/125207.038:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 18, 2019 08:13:48.50 NEW SESSION
+oct. 18, 2019 08:13:48.50 [23520:21308:1018/081348.500:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:13:57.37 [23520:22680:1018/081357.376:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:13:58.36 [23520:6212:1018/081358.361:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Request canceled.
+oct. 18, 2019 08:13:58.36 [23520:6212:1018/081358.361:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Request canceled.
+oct. 18, 2019 08:13:58.36 [23520:6212:1018/081358.361:ERROR:account_info_fetcher.cc(60)] OnGetTokenFailure: Request canceled.
+oct. 18, 2019 08:18:34.93 [13032:3976:1018/081834.930:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:18:42.35 [13032:8436:1018/081842.357:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:22:22.49 [10956:6956:1018/082222.493:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:22:28.87 [10956:13212:1018/082228.870:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:22:40.94 [4176:10600:1018/082240.942:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:27:26.38 [6252:15536:1018/082726.383:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:27:36.55 [6252:1424:1018/082736.557:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:30:07.54 [14584:12600:1018/083007.543:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:30:13.72 [14584:4116:1018/083013.725:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:33:57.49 [4032:6724:1018/083357.491:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:33:59.62 [4032:10796:1018/083359.623:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:34:24.02 [4032:10796:1018/083424.023:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:34:29.37 [4032:12072:1018/083429.375:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:34:31.21 [4032:12072:1018/083431.216:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:34:31.25 [4032:12072:1018/083431.252:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:36:16.03 [8884:15092:1018/083616.032:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:36:19.43 [8884:11396:1018/083619.437:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:36:50.42 [11032:18132:1018/083650.426:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:36:55.68 [11032:18028:1018/083655.689:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:37:24.53 [9488:20560:1018/083724.536:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:37:36.82 [18724:20864:1018/083736.827:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:37:37.97 [18724:19440:1018/083737.974:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:37:58.16 [16372:16308:1018/083758.161:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:37:59.31 [16372:19528:1018/083759.315:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:38:22.93 [16372:19528:1018/083822.933:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:38:30.91 [16372:12112:1018/083830.912:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:38:31.21 [16372:12112:1018/083831.210:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:38:32.75 [16372:12112:1018/083832.754:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:39:35.04 [13096:8152:1018/083935.042:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:39:38.20 [13096:9760:1018/083938.205:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:42:29.83 [16328:20444:1018/084229.838:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:42:41.02 [16328:12064:1018/084241.029:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:43:46.68 [14924:8368:1018/084346.686:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:43:55.84 [14924:12984:1018/084355.848:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:44:12.62 [14924:13156:1018/084412.622:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+oct. 18, 2019 08:45:56.80 [1380:12720:1018/084556.801:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:46:52.97 [15656:16208:1018/084652.975:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:47:30.62 [10068:17740:1018/084730.620:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:48:12.05 [10760:2832:1018/084812.049:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:48:16.26 [10760:3352:1018/084816.265:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:48:29.77 [9204:23536:1018/084829.773:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:48:31.04 [9204:18984:1018/084831.045:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:48:45.96 [20444:18980:1018/084845.966:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:48:48.16 [20444:2436:1018/084848.159:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:54:31.17 [11832:2884:1018/085431.174:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:54:36.41 [11832:256:1018/085436.415:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:54:56.10 [11224:20168:1018/085456.103:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:55:05.28 [11224:22188:1018/085505.280:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:55:23.41 [6908:17820:1018/085523.415:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 08:55:28.61 [6908:9584:1018/085528.609:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:55:56.17 [6908:9584:1018/085556.174:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 18, 2019 08:55:56.77 [6908:14324:1018/085556.773:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:55:56.94 [6908:14324:1018/085556.943:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 08:55:57.94 [6908:14324:1018/085557.948:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 18, 2019 09:18:56.72 [18680:17968:1018/091856.722:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:21:43.38 [1268:20252:1018/092143.379:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:22:49.47 [19196:1664:1018/092249.474:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:28:08.76 [17232:20404:1018/092808.766:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:29:22.08 [22180:16868:1018/092922.079:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:29:38.05 [8396:18716:1018/092938.053:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:29:49.15 [10804:20168:1018/092949.157:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:29:57.97 [1200:15248:1018/092957.973:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:30:06.68 [18120:8336:1018/093006.683:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:30:53.56 [14908:12080:1018/093053.561:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:32:14.21 [13996:17396:1018/093214.209:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:37:39.59 [700:17984:1018/093739.589:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:37:59.73 [17416:9312:1018/093759.733:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 09:43:56.99 [18028:12272:1018/094356.994:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:00:12.26 [4668:23388:1018/100012.259:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:01:04.63 [8960:12676:1018/100104.629:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:12:23.19 [20008:7744:1018/101223.198:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:12:29.99 [3364:6236:1018/101229.998:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:13:29.75 [18460:21032:1018/101329.758:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:13:35.96 [2396:18232:1018/101335.962:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:16:33.73 [13456:13036:1018/101633.731:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:16:40.92 [20444:21832:1018/101640.919:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 10:44:47.53 [11964:16064:1018/104447.536:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 18, 2019 11:38:41.22 NEW SESSION
+oct. 18, 2019 11:38:41.22 [2208:14656:1018/113841.226:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 11:38:49.78 [10148:13296:1018/113849.777:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 11:53:37.27 [11404:11252:1018/115337.276:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 18, 2019 11:57:59.80 [12200:1484:1018/115759.800:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 20, 2019 13:42:25.82 NEW SESSION
+oct. 20, 2019 13:42:25.82 [13092:21256:1020/134225.820:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 13:44:26.26 [14764:20060:1020/134426.267:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 13:55:16.35 [20292:13712:1020/135516.352:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 13:56:47.29 [10396:23444:1020/135647.296:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 13:59:18.21 [3164:17656:1020/135918.214:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:00:45.21 [23216:13652:1020/140045.213:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:00:54.89 [23216:16916:1020/140054.892:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+oct. 20, 2019 14:01:23.43 [14780:16596:1020/140123.430:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:04:43.12 [11112:23416:1020/140443.125:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:05:29.13 [12676:9312:1020/140529.133:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:08:41.38 [4908:9956:1020/140841.380:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:44:27.95 [5596:13180:1020/144427.949:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:45:15.47 [4988:3140:1020/144515.469:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:49:00.32 [2856:11064:1020/144900.324:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 14:58:57.04 [13848:8316:1020/145857.049:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 15:00:21.10 [9352:14912:1020/150021.102:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 15:01:27.90 [18552:22872:1020/150127.900:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 20, 2019 15:13:21.80 [16820:2408:1020/151321.807:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 21, 2019 11:24:17.39 NEW SESSION
+oct. 21, 2019 11:24:17.39 [14688:4116:1021/112417.393:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)

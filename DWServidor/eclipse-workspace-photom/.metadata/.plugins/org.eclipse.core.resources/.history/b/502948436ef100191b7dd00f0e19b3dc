@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!
+	String opA = "";
+	String opB = ""; 
+%>
+	<h2>Escriba el resultado de la siguiente division:</h2>
+	<form action="destinoAdivinaDivision.jsp" method="post">
+	<table>
+		<tr>
+			<th><strong><%=opA%></strong></th>
+			<th><strong><%=opB%></strong></th>
+		</tr>
+		<tr>
+			<td><input type="text" name="usuA" required/></td>
+			<td><input type="text" name="usuB" required/></td>
+		</tr>
+	</table>
+	<p><input type="submit" name="enviar" value="corregir" /></p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*,java.text.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!	public static int[] sacaCalendar(Calendar f){
+		int[] fechaHora = new int[6];
+		return fechaHora;
+}
+%>
+<%
+	Calendar f1 = Calendar.getInstance();
+	
+%>
+</body>
+</html>

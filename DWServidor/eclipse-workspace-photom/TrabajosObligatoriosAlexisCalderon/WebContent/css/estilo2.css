@@ -1,0 +1,39 @@
+form{
+	width: 40%;
+	margin: 0 auto;
+}
+
+table{
+	border:2;
+	background-color: lightblue;
+	text-align: center;
+}
+
+input{
+	background-color: lightgray;
+	margin: 5px;
+	padding: 10px;
+}
+
+th{
+	font-weight: 10em;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover{
+	color: #00ff40;
+	font-size: 150%;
+}
+
+input:hover{
+	position: absolute;
+	transition: .5s ease;
+	width: 10%;
+	height:10%;
+	background-color: #ff8080;
+}

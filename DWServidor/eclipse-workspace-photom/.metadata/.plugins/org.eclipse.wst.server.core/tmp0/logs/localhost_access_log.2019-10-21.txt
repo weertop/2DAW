@@ -1,0 +1,14 @@
+127.0.0.1 - - [21/Oct/2019:11:24:16 +0200] "GET / HTTP/1.1" 404 956
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:18 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4681
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:20 +0200] "GET /favicon.ico HTTP/1.1" 404 967
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:32 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4741
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:33 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4675
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:33 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4691
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:34 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4724
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:34 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4726
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:34 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4680
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:40 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4727
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:46 +0200] "POST /TrabajosObligatoriosAlexisCalderon/destinoSeleccionaFormaColor.jsp HTTP/1.1" 200 196
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:50 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4707
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:53 +0200] "POST /TrabajosObligatoriosAlexisCalderon/destinoSeleccionaFormaColor.jsp HTTP/1.1" 200 204
+0:0:0:0:0:0:0:1 - - [21/Oct/2019:11:24:58 +0200] "GET /TrabajosObligatoriosAlexisCalderon/seleccionaFormaColor.jsp HTTP/1.1" 200 4705

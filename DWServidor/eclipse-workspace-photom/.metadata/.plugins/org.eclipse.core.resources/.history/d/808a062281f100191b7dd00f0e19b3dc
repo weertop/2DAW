@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.time.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	LocalTime fecha0 = LocalTime.now();
+	LocalDate fecha1 = LocalDate.of(2019,Month.AUGUST,12);
+	LocalDate fecha2 = LocalDate.of(2019,5,15);
+	LocalDate fecha3 = LocalDate.parse("2020-02-27");
+	LocalDate fecha4 = fecha3.plusDays(5);						//sumanos 5 dias a la fecha 3
+	LocalDate fecha5 = fecha2.minusYears(1);
+	boolean sw = fecha5.isBefore(fecha3);
+	boolean sw2 = LocalDate.of(2020,Month.APRIL,1).isAfter(LocalDate.parse("2020-12-03"));
+	int dif = Period.between(fecha5, fecha3).getDays();						//dif devuelve tiempo en int por ser LOCALDATE pero si fuera LOCALTIME seria long porque devuelve timepo entre 2 timepos en microsegundos
+	%>
+	<p>Fecha actual: <%=fecha0.toString()%></p>
+	<p>Fecha Of: <%=fecha1.toString()%></p>
+	<p>Fecha Of: <%=fecha2.toString()%></p>
+	<p>Fecha parse: <%=fecha3.toString()%></p>
+	<p>Fecha sumando dias: <%=fecha4.toString()%></p>
+	<p>Fecha restando: <%=fecha5.toString()%></p>
+	<p>is before e is after: <%=sw%> y la otra <%=sw2%></p>
+	<p>entre <%=fecha5.toString()%> y <%=fecha4.toString()%> hay <%=dif%> dias</p>
+	
+</body>
+</html>

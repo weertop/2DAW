@@ -1,0 +1,3 @@
+pepe,perez,3.0
+hola,mundo,3.2
+pepe,jsdkl,4.3

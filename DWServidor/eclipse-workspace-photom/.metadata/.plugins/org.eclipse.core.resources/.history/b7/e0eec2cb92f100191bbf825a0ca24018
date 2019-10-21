@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	int i=0;
+	String[] tamanio = {"50px","100px","200px"};
+	String[] tamPalabras = {"pequeño","mediano","grande"};
+	String recibido = request.getParameter("usuEscoge");
+	String usuDebiaBuscar = request.getParameter("debiaBuscar");
+
+	if(recibido.equals(tamanio[i]) && usuDebiaBuscar.equals(tamPalabras[i])){
+		out.println("Correcto");
+	}
+	%>
+</body>
+</html>

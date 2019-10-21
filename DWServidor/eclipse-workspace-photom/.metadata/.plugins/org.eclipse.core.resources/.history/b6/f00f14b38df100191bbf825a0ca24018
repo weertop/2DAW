@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String[] tamanio = {"100px","200px","300px"};
+		int posicionX = 0;
+		int posicionY = 0;
+		Random rd = new Random();
+		
+		for(int i=0; i<2 ; i++){
+			int tamAleatorio = rd.nextInt(3);
+			String tamElegido = tamanio[tamAleatorio];
+	%>
+			<svg xmlns="http://www.w3.org/2000/svg"  height="450px" width="450px">
+			<rect x="<%=posicionX%>" y="<%=posicionY%>" width="<%=tamElegido%>" height="<%=tamElegido%>" stroke="green" stroke-width=2 fill="red"/>
+			</svg>
+		<%
+		} 
+		%>
+	
+	
+	
+</body>
+</html>

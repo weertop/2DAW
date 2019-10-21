@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		int opA = Integer.parseInt(request.getParameter("usuA"));
+		int opB = Integer.parseInt(request.getParameter("usuB"));
+		int alA = Integer.parseInt(request.getParameter("alA"));
+		int alB = Integer.parseInt(request.getParameter("alB"));
+		
+		int resul = alA / alB;
+		int resto = alA % alB;
+		
+		resul = 
+	%>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*, java.text.SimpleDateFormat, java.time.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String entrada = request.getParameter("entrada");
+	String salida = request.getParameter("salido");
+	
+	LocalDate fechaEntrada = LocalDate.parse(entrada);
+	LocalDate fechaSalida = LocalDate.parse(salida);
+	
+	int dif = Period.between(fechaEntrada, fechaSalida).getDays();
+%>
+<p>Tu estancia desde <%=entrada%> hasta <%=salida%> son <%=dif%> dias </p>
+<p><a href="reserva.jsp">Volver</a></p>
+</body>
+</html>

@@ -24,7 +24,7 @@
 		
 		if(opA.equals(signo)){
 			out.println("<h3>Signo Correcto</h3>");
-			if(opB == resul){
+			if(opB == Math.abs(resul)){
 				out.println("<h3>Resulatado Correcto</h3>");
 			}else{
 				out.println("<h3>Fallaste en el resultado era: " + resul + "</h3>");

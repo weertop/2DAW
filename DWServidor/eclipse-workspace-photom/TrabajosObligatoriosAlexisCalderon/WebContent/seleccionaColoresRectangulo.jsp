@@ -24,7 +24,7 @@
 	%>
 			<button type="submit" name="usuEscoge" value="<%=color[ale]%>">
 			<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
-			<rect x="<%=posicionX%>" y="50" width="150px" height="200px" stroke="black" stroke-width=2 fill="<%=color[ale]%>"/>
+			<rect x="50" y="30" width="150px" height="200px" stroke="black" stroke-width=2 fill="<%=color[ale]%>"/>
 			</svg>
 			</button>
 			

@@ -30,5 +30,6 @@
 	%>
 	<hr/>
 	<p><a href="adivinaDivision.jsp">Volver a jugar</a></p>
+	<p><a href="indice.html">Volver al indice</a></p>
 </body>
 </html>

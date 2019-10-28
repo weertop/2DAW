@@ -40,6 +40,7 @@
 	<input type="text" name="introducido" maxlength="1"/>
 	<input type="hidden" name="elegidaLetra" value="<%=letraElegida%>"/>
 	<input type="submit" name="enviar" value="mostrar" />
+	<p><a href="indice.html">Volver al indice</a></p>
 </form>
 
 </body>

@@ -15,18 +15,18 @@
 		Random rd = new Random();
 		int tamAleatorioPalabra = rd.nextInt(tamanio.length);
 		String tamElegidoPalabra = tamPalabras[tamAleatorioPalabra];
-		
+		int tamAleatorio = rd.nextInt(tamanio.length);
 		%>
 		<form action="destinoTamanioDisc.jsp" method="post">
 		<%
-		for(int i=0; i<3 ; i++, posicionX+=10){
-			int tamAleatorio = rd.nextInt(3);
+		for(int i=0; i<tamanio.length ; i++,tamAleatorio++){
+			if(tamAleatorio == tamanio.length) tamAleatorio=0; 
 			String tamElegido = tamanio[tamAleatorio];
 	%>
 			
 				<button type="submit" name="usuEscoge" value="<%=tamElegido%>">
 				<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
-				<rect x="<%=posicionX%>" y="50" width="<%=tamElegido%>" height="<%=tamElegido%>" stroke="green" stroke-width=2 fill="red"/>
+				<rect x="30" y="30" width="<%=tamElegido%>" height="<%=tamElegido%>" stroke="green" stroke-width=2 fill="red"/>
 				</svg>
 				</button>
 			

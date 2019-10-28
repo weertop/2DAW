@@ -13,13 +13,13 @@
 	int posicionX = 0;
 	Random rd = new Random();
 	int aleBuscado;
+	int ale = rd.nextInt(forma.length);
 %>
 
 <form action="destinoSeleccionaForma.jsp" method="post">
 		<%
-		for(int i=0; i<forma.length ; i++, posicionX+=20){
-			int ale = rd.nextInt(forma.length);
-			
+		for(int i=0; i<forma.length ; i++,ale++){
+			if(ale==forma.length) ale=0;
 			switch(ale){
 				case 0: %>			
 						<button type="submit" name="usuEscoge" value="<%=forma[0]%>">

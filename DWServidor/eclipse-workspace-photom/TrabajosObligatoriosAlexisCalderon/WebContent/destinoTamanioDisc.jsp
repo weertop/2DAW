@@ -10,7 +10,7 @@
 	<%
 	//int i=0;
 	String[] tamanio = {"50px","100px","200px"};
-	String[] tamPalabras = {"pequeño","mediano","grande"};
+	String[] tamPalabras = {"pequeno","mediano","grande"};
 	String recibido = request.getParameter("usuEscoge");
 	String usuDebiaBuscar = request.getParameter("debiaBuscar");
 	

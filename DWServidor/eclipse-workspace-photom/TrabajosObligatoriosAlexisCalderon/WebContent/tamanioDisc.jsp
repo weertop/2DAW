@@ -10,7 +10,7 @@
 <body>
 	<%
 		String[] tamanio = {"50px","100px","200px"};
-		String[] tamPalabras = {"pequeño","mediano","grande"};
+		String[] tamPalabras = {"pequeno","mediano","grande"};
 		int posicionX = 10;
 		Random rd = new Random();
 		int tamAleatorioPalabra = rd.nextInt(tamanio.length);

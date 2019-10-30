@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Collections;
 using System.Web.UI.WebControls;
 
 public partial class EjercicioFechaPropuesto : System.Web.UI.Page
 {
-    String[] fechas = new String[10];
-    String[] reservaCompleta = new string[10];
-    //public static int i = 0;
+    static ArrayList fechas = new ArrayList();
+    static ArrayList reservaCompleta = new ArrayList();
 
+    static int i=0;
+
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         DateTime hoy = DateTime.Today;
         Label4.Text = hoy.ToShortDateString();
+        
 
         mostrar_hora();
 
-        Calendar1.SelectedDate = Calendar1.TodaysDate;
+        //Calendar1.SelectedDate = Calendar1.TodaysDate;
 
-        foreach (string word in reservaCompleta)
-        {
-            Label12.Text = "WORD: " + word;
-        }
     }
 
     protected void Timer1_Tick(object sender, EventArgs e)
@@ -61,10 +61,19 @@ public partial class EjercicioFechaPropuesto : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        int cont = 0;
-        fechas[cont] = Label12.Text;
-        reservaCompleta[cont] = TextBox2.Text + ':' +  TextBox1.Text +  TextBox3.Text + Label12.Text;
-        cont++;
+        //HiddenField1.Value = Convert.ToString(cont);
+        //HiddenField1.Value = Convert.ToString(HiddenField1.Value);
+        //int actual = Convert.ToInt16(HiddenField1.Value);
+
+        fechas.Add(Label12.Text);
+        reservaCompleta.Add(TextBox2.Text + ':' + TextBox1.Text + ':' + TextBox3.Text + ':' + Label12.Text);
+        /*foreach (string word in reservaCompleta)
+        {
+            Label12.Text = word + " ";
+        }*/
+
+        i++;
+        //HiddenField1.Value = Convert.ToString(actual);
     }
 
     protected void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,17 +94,21 @@ public partial class EjercicioFechaPropuesto : System.Web.UI.Page
 
     protected void Button3_Click(object sender, EventArgs e)
     {
-        String busqueda = TextBox5.Text;
+        string busqueda = TextBox5.Text;
+        string[] piso = new string[4];
+        //Label11.Text = reservaCompleta[1];
 
-        for (int i = 0; i < fechas.Length; i++)
+        for (int i = 0; i < reservaCompleta.Count; i++)
         {
-            String[] piso = fechas[i].Split(':');
-            if (piso[0].Equals(busqueda))
+             piso = reservaCompleta[i].ToString().Split(':');
+
+            if (piso[0] == busqueda)
             {
-                ListBox2.DataSource = fechas[i];
+                ListBox2.Items.Add(reservaCompleta[i].ToString());
             }
         }
 
-        ListBox2.DataBind();
+        //ListBox2.DataBind();
     }
+
 }

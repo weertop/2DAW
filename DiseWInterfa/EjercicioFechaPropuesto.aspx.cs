@@ -61,19 +61,20 @@ public partial class EjercicioFechaPropuesto : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        //HiddenField1.Value = Convert.ToString(cont);
-        //HiddenField1.Value = Convert.ToString(HiddenField1.Value);
-        //int actual = Convert.ToInt16(HiddenField1.Value);
-
         fechas.Add(Label12.Text);
         reservaCompleta.Add(TextBox2.Text + ':' + TextBox1.Text + ':' + TextBox3.Text + ':' + Label12.Text);
-        /*foreach (string word in reservaCompleta)
-        {
-            Label12.Text = word + " ";
-        }*/
-
         i++;
-        //HiddenField1.Value = Convert.ToString(actual);
+
+        limpiar();
+     
+    }
+
+    void limpiar()
+    {
+        TextBox1.Text = "";
+        TextBox2.Text = "";
+        TextBox3.Text = "";
+        Label12.Text = "";
     }
 
     protected void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,6 +95,9 @@ public partial class EjercicioFechaPropuesto : System.Web.UI.Page
 
     protected void Button3_Click(object sender, EventArgs e)
     {
+        ListBox2.Items.Clear();
+
+
         string busqueda = TextBox5.Text;
         string[] piso = new string[4];
         //Label11.Text = reservaCompleta[1];
@@ -108,7 +112,7 @@ public partial class EjercicioFechaPropuesto : System.Web.UI.Page
             }
         }
 
-        //ListBox2.DataBind();
+        TextBox5.Text = "";
     }
 
 }

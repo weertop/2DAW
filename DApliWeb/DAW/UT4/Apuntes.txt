@@ -1,0 +1,66 @@
+
+2 Ficheros de zona---zona directa 	|Reg recursos		SOA start of authority -> FQDN contacto, Refresh(6h copia seguridad a esclavo), Retry(si falla principal no envia refresh, pide al esclavo 1h),Expire(Tiempo que se da a un servidor secundario hasta expirar informacion),TTL(tiempo que la info de cache es valida))
+									|					NS (da el nombre de dominio)
+														A	(asocia un nombre de dominio con una IP)
+									
+									
+									
+									
+									
+									
+									
+									
+				---Zona inversa		|SOA
+									|NS
+									|Registro PTR (al revez) 10.12.3.253 pasa a ser 253.3.12.10.in.addr.arpa IN PTR W2008Server253.daw253.net
+				
+				
+				
+				
+				
+				
+Ejemplo completo DNS: 						daw253.net IN NS W2008Server253.daw.net 		
+	(nombre de dominio y luego la IP)		W2008Server253.daw253.net IN A 10.12.3.253
+											
+											ubuntuServer253 IN A 10.12.1.253
+	(Alias para no escribir todo)			servidorW IN CNAME W2008Server253
+	(servidor correo)						servidorCorreo IN MX 10.12.5.253
+	
+	
+	
+	
+	
+	Linux
+	Instalar sudo apt install bind9
+				ps aux | grep bind
+				netstat -nl (o usa puertos udp y tcp nlt y nlu)
+				sudo service bind9 stop,start,restart
+	Directorio: /etc/bind
+				sudo nano /etc/bind/named.conf 			(configuracion)
+				sudo nano /etc/bind/named.conf.local	(2 ficheros de zona directa - inversa)
+								\------->				zone "asirxx.net"{ 
+															type master;
+															File "/etc/bind/db/asirxx.net";};		(definimos la zona directa)
+														
+														zone "12.10.in-addr.arpa."{
+															type master;
+															file "/etc/bind/db.12.10";};
+															
+				---			sudo cp db.locl db.asir253.net
+							sudo nano db.asir253
+							
+				---			sudo cp db.127 db.12.10
+							sudo nano db.12.10
+							
+				----			sudo service bind9 stop
+												start
+												
+				-----			(Para cambiar el DNS)
+							sudo nano /etc/netplan/01-netcfg.yaml
+								cambiar adrres por la nuestra {10.12.1.253/16}
+														10.12.0.254
+								nameservers adresses {10.12.1.253}
+								search asir253.net
+								
+							
+							comando dig -x 10.12.1.253 				(para ver que esta fallando debemos ver el bit de authority)

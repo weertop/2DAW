@@ -1,0 +1,110 @@
+package pruebas;
+
+import clasesPrincipales.*;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class SesionPrueba {
+	
+	public static Pelicula creaPelicula() {
+		String titulo;
+		String director;
+		int anno;
+		String sinopsis;
+		genero genero = null;
+		Pelicula p = null;
+		int opcionTipo;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduce el titulo: ");
+		titulo = sc.nextLine();
+		System.out.print("Introduce el director: ");
+		director = sc.nextLine();
+		System.out.print("Introduce el año: ");
+		anno = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Introduce el sinopsis: ");
+		sinopsis = sc.nextLine();
+		System.out.println("Introduce el genero:\n\t1)TERROR\n" + 
+				"\t2)FANTASIA\n" + 
+				"\t3)DRAMA\n" + 
+				"\t4)COMEDIA\n" + 
+				"\t5)TRHILLER, ");
+		opcionTipo = sc.nextInt();
+		switch (opcionTipo) {
+			case 1: genero=genero.TERROR;
+			case 2: genero=genero.FANTASIA;
+			case 3: genero=genero.DRAMA;
+			case 4: genero=genero.COMEDIA;
+			case 5: genero=genero.TRHILLER;
+		}
+		
+		p = new Pelicula(titulo, director, anno, sinopsis, genero);
+		
+		return p;
+	}
+	
+	public static Sala crearSala() {
+		int butacas;
+		Sala s = null;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Introduce el numero de butacas: ");
+		butacas = sc.nextInt();
+		
+		s = new Sala(butacas);
+		
+		return s;
+	}
+	
+	public static Sesion crearSesion(Pelicula p, Sala s) throws ParseException {
+		String fechaInicial;
+		Date fecha;
+		Pelicula pelicula;
+		Sala sala;
+		Sesion se = null;
+		
+		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+		System.out.println("Tntroduce fecha de la sesion (con formato dd/mm/aaaa):");
+		fechaInicial = sc.nextLine();
+		
+		fecha = SimpleDateFormat.parse(fechaInicial);
+		se = new Sesion(fecha,p,s);
+		return se;
+	}
+	
+	public static void main(String[] args) throws ParseException{
+
+		/*Sala s1 = new Sala(10);
+		System.out.println("Sala: " + s1.toString());
+		Pelicula p1 = new Pelicula("La llamada", "Los javis", 2007, "Hoy he sentido la llamada.", genero.MUSICAL);
+		SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+		String fecha = "11/03/2018";
+		Sesion se1 = new Sesion(SimpleDateFormat.parse(fecha), p1, s1);*/
+		
+		Sala s1 = SesionPrueba.crearSala();
+		
+		Pelicula p1 = SesionPrueba.creaPelicula();
+		
+		Sesion se1 = SesionPrueba.crearSesion(p1,s1);
+		
+		System.out.println("\n" + se1.toString());
+		System.out.println("\nNúmero de butacas totales en la sala: " + se1.getNum_butacas());
+		System.out.println("Numero de butacas disponibles en la sala: " + se1.getNum_butacas_disponibles());
+		System.out.println("\nCompramos una entrada y comprobamos que el número de butacas disponible se reduce.");
+		se1.venta(1);
+		System.out.println("Numero de butacas disponibles en la sala: " + se1.getNum_butacas_disponibles());
+		System.out.println("\nAhora vendemos todas las entradas del cine e intentamos combrar una cuando la sala está llena, despues veremos lo recaudado.");
+		for (int i = 0; i < 10; i++)
+			System.out.println(se1.venta((int)(Math.random()*(4-1+1) + 1)));
+		System.out.println("\nDinero recaudado :" + se1.recaudado());
+		System.out.println("\nNumero de butacas disponibles en la sala: " + se1.getNum_butacas_disponibles());
+
+	}
+}

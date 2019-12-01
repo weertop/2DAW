@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+
+public class Sistema {
+	
+	public static void mostrarArray(ArrayList ar) {
+		Iterator it = ar.iterator();
+		while(it.hasNext()) {
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
+		
+		Comentario c1 = new Comentario("hola mundo");
+		c1.responderC("hola caracola");
+		c1.responderC("hola");
+		Comentario c2 = new Comentario("hola mundo 2");
+		c2.responderC("hola caracola 2");
+		c2.responderC("hola 2");
+		c2.votarPositivo();
+		c1.votarNegativo();
+		
+		
+		comentarios.add(c1);
+		comentarios.add(c2);
+		Collections.sort(comentarios);
+		
+		System.out.println(comentarios.);
+
+	}
+
+}

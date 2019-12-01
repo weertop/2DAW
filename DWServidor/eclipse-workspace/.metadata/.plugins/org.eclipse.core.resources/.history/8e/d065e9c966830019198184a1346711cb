@@ -1,0 +1,15 @@
+package clasesPrincipales;
+
+/*Esta es una subclase de Entradas que hereda sus atributos y metodo al que sobreescribe */
+
+public class EntradaNormal extends Entradas{
+
+	public EntradaNormal(double precioEntrada) {
+		super(precioEntrada);
+	}
+	
+	/*Metodo sobreescrito para esta subclase, getPrecio() devolvera una a getprecioEntrada() de la clase superior, esta contiene el precio*/
+	public double getPrecio() {
+		return super.getprecioEntrada();
+	}
+}

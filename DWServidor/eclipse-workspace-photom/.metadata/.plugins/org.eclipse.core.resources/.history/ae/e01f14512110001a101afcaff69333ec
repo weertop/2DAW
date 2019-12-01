@@ -1,0 +1,7 @@
+package factory;
+
+public class FactoryFigura {
+	public static Figura getFigura(String tipo) {
+		
+	}
+}

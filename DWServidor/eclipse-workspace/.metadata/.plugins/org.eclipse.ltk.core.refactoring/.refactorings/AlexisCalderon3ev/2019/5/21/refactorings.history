@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;nombre3ev&apos; to &apos;eva3&apos;&#x0D;&#x0A;- Original project: &apos;AlexisCalderon3ev&apos;&#x0D;&#x0A;- Original element: &apos;AlexisCalderon3ev/src/nombre3ev&apos;&#x0D;&#x0A;- Renamed element: &apos;AlexisCalderon3ev/src/eva3&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;nombre3ev&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;nombre3ev" name="eva3" qualified="false" references="true" stamp="1558419501502" textual="false" version="1.0"/>
+</session>

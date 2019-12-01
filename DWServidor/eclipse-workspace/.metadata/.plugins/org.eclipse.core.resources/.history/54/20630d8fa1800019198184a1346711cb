@@ -1,0 +1,51 @@
+package Pruebas;
+import clases.*;
+
+
+public class PeliculaPrueba{
+
+	public static void main(String[] args) {
+	
+	Pelicula p1= new Pelicula("La llamada", "Los javis", 2007, "Hoy he sentido la llamada.", genero.MUSICAL);
+	System.out.println("Imprimimos la primera película");
+
+
+	System.out.println(p1);
+	
+	Pelicula p2=new Pelicula("Black Phanter", "Ryan Coogler", 2018, "sinopsis blackPhanter", genero.FANTASIA);
+
+	System.out.println("Imprimimos la segunda película:");
+	System.out.println(p2);
+	
+	System.out.println("Cambiamos la fecha y la imprimimos:");
+
+	p2.setAnno(1997);
+	System.out.println(p2.getAnno());
+	
+	System.out.println("Cambiamos el genero y lo imprimimos:");
+
+	p2.setGenero(genero.COMEDIA);
+	System.out.println(p2.getGenero());
+
+	System.out.println("Cambiamos el director y lo imprimimos:");
+
+	p2.setDirector("Director");
+	System.out.println(p2.getDirector());
+
+	System.out.println("Cambiamos la sinopsis y la imprimimos:");
+
+	p2.setSinopsis("sinopsis 2");
+	System.out.println(p2.getSinopsis());
+	
+	System.out.println("Cambiamos el titulo de la película y lo imprimimos:");
+
+	p2.setTitulo("pelicula2");
+	System.out.println(p2.getTitulo());
+	
+	System.out.println("Imprimimos la segunda película para ver que todos los cambios se han realizado:");
+
+	System.out.println(p2);
+
+
+	}
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Abstracto</title>
+		<script type="text/javascript" >
+
+			window.onload = function () {
+				document.getElementById('lista1').onchange = crearTipo;
+
+				var radio = document.getElementsByName('opciones');
+				for(var i=0; i<radio.length;i++){
+					radio[i].onchange = cambiarTipo;
+				}
+			}
+
+			var crearTipo = function () {
+				var seleccionado = this.value;
+				//limpiar el select de los que ya hayan creado
+				limpiarSelect();
+
+				for (var i = 0; i < 3; i++) {
+					var opcion = document.createElement('option');
+					var texto = document.createTextNode(seleccionado + (i + 1));
+					opcion.id = (i + 1);
+					opcion.setAttribute('name', 'segSelect');
+
+					//hacemos que siempre se seleccione una por defecto
+					if (i == 0) {
+						opcion.setAttribute('selected', 'selected');
+					}
+
+					opcion.appendChild(texto);
+
+					document.getElementById('lista2').appendChild(opcion);
+				}
+			}
+
+			var cambiarTipo = function () {
+				var elegido = this.value;
+				console.log('Tipo que llega->' + elegido);
+
+				switch (elegido) {
+					case 'negro':
+						alert('Usted a seleccionado la opcion ' + elegido);
+						break;
+					case 'blanco':
+						alert('Usted a seleccionado la opcion ' + document.getElementById('lista2').value);
+						break;
+					case 'marron':
+						var boton = document.createElement('input');
+						boton.setAttribute('type', 'button');
+						boton.setAttribute('value', 'Pulsa para saludo');
+
+						//para que el boton haga algo muestra un mensaje al pulsarlo
+						boton.onclick = function () {
+							alert('Hola !!! ' + String.fromCharCode(55357, 56358))
+						};
+						// '🐦'
+						document.getElementById('contenedor').appendChild(boton);
+						break;
+				}
+			}
+
+			var limpiarSelect = function () {
+				var tengo = document.getElementsByName('segSelect');
+				var i = tengo.length;
+				while (i--) {
+					tengo[i].parentNode.removeChild(tengo[i]);
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1>Abstracto</h1>
+		<form>
+			<table>
+				<tr>
+					<td>
+						<select id="lista1" size="3">
+							<option value="uno">Uno</option>
+							<option value="dos">Dos</option>
+							<option value="tres">Tres</option>
+						</select>
+					</td>
+					<td>
+						<select id="lista2" size="3">
+				
+						</select>
+					</td>
+					<td>
+						<input type="radio" name="opciones" id ="negro" value="negro" /> Negro<br />
+						<input type="radio" name="opciones" id ="blanco" value="blanco" /> Blanco<br />
+						<input type="radio" name="opciones" id ="marron" value="marron" /> Marron
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" id="contenedor">
+					</td>
+				</tr>
+		</form>
+		<noscript>
+			<p>No esta activado el soporte JavaScript</p>
+		</noscript>
+	</body>
+</html>

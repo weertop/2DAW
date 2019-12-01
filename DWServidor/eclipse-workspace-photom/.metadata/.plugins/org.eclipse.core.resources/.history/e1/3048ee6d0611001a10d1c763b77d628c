@@ -1,0 +1,9 @@
+package adapter;
+
+public class PersonaVieja implements IPersonaNueva{
+	private String nombre;
+	private String apellido;
+	private LocalDate fechaNacimiento;
+	
+	
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<script>
+    var numeros = [];
+
+    window.onload = function(){
+        
+        document.getElementById('prom').onclick = guardar;
+    
+    }
+
+    var guardar = function(){
+        //var tam = parseInt(document.getElementsByName('numero'));
+        for(var i=1; i<=5; i++){
+            numeros.push(parseInt(document.getElementById('num' + i).value));
+        }
+        console.log('array->' + numeros);
+        calcula();
+    }
+
+    var calcula = function(){
+        var suma_total = 0;
+        var tam = 0;
+        var media = 0;
+        var cercano = 0;
+        var resta = [];
+        console.log('suma_total->' + suma_total);
+
+        tam = numeros.length;
+        for(var i=0; i<tam;i++){
+            suma_total += numeros[i];
+        }
+        media = suma_total/tam;
+        for(var i=0; i<tam;i++){
+            resta[i] = Math.abs(numeros[i] - media);
+        }
+
+        console.log('array resta->' + resta);
+        var menor = resta[0];
+        var pos = 0;
+        for(var j=0; j<resta.length;j++){
+            if(menor > resta[j]){
+                menor = resta[j];
+                pos = j;
+            }
+
+        }
+
+        console.log('pos->' + pos);
+                console.log('menor->' + menor);
+
+        cercano = numeros[pos];
+        console.log('media->' + media);
+        console.log('cercano->' + cercano);
+        alert('media es: ' + media);
+        alert('el mas cercano es: ' + cercano);
+
+        console.log('array->' + numeros);
+        numeros = [];
+        console.log('array->' + numeros);
+    }
+
+</script>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        Introduce 5 numeros:<br />
+&nbsp;<input id="num1" type="text" name ="numero" />
+       <input id="num2" type="text" name="numero" />
+        <input id="num3" type="text"name ="numero" />
+        <input id="num4" type="text" name ="numero"/>
+        <input id="num5" type="text" name ="numero"/><br />
+&nbsp;<input id="prom" type="button" value="CALCULAR" /></div>
+    </form>
+</body>
+</html>

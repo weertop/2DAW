@@ -1,0 +1,113 @@
+package clasesPrincipales;
+import java.io.Serializable;
+import java.util.*;
+
+/*Esta clase incluye informacion sobre la cartelera en las que se va a proyectar las peliculas, */
+
+public class Sesion implements Serializable{
+	
+	/*Atributos en los que incluimos uno de tipo Sala, un contador de butacas,
+	 otro de butacas_disponibles y la ListaEntradas*/
+	private Date fecha;
+	private Pelicula pelicula;
+	private int num_butacas;
+	private int num_butacas_disponibles;
+	private Sala sala;       
+	private ArrayList<Entradas> ListaEntradas = new ArrayList<Entradas>();
+
+	public Sesion(Date fecha, Pelicula pelicula, Sala sala){
+		this.setFecha(fecha);
+		this.setPelicula(pelicula);
+		this.setSala(sala);
+		num_butacas=this.getSala().getButacas();
+		num_butacas_disponibles=num_butacas;
+	}
+	
+	/*metodo encargado de calcular el total recaudado dado una lista de entradas de cualquier tipo*/
+	public double recaudado(){
+		double recaudado=0;
+		for(Entradas aux: ListaEntradas) {
+			recaudado+=aux.getPrecio();
+		}
+		return recaudado;
+	}
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+	public Pelicula getPelicula() {
+		return pelicula;
+	}
+
+	public void setPelicula(Pelicula pelicula) {
+		this.pelicula = pelicula;
+	}
+
+	public int getNum_butacas() {
+		return num_butacas;
+	}
+
+	public void setNum_butacas(int num_butacas) {
+		this.num_butacas = num_butacas;
+	}
+
+	public int getNum_butacas_disponibles() {
+		return num_butacas_disponibles;
+	}
+
+	public void setNum_butacas_disponibles(int num_butacas_disponibles) {
+		this.num_butacas_disponibles = num_butacas_disponibles;
+	}
+
+	public Sala getSala() {
+		return sala;
+	}
+
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+	
+	/*
+	 Metodo encargado de aniadir una entrada a la lista de entradas
+	 */
+	public boolean addEntrada(Entradas e){
+		return ListaEntradas.add(e);
+	}
+	
+	/*
+	 Metodo encargado de vender entradas, primero debe comprobar 
+	 que tipo de entrada es, siendo:
+	 1:entrada normal
+	 2:dia del espectador
+	 3:entrada joven
+	 4:entrada 3ra edad
+	 comprueba si existen entradas disponibles, actualiza las entradas
+	 disponibles y devuelve un true en caso contrario un false.
+	 */
+	public boolean venta(int tipoEntrada){
+		if (tipoEntrada<1 || tipoEntrada>4) return false;
+		Entradas e=null;
+		if(tipoEntrada==1) {
+			e= new EntradaNormal(10.0);}
+		else if(tipoEntrada==2) {
+			e= new EntradaDiaEspectador(10.0);}
+		else if(tipoEntrada==3) {
+			e = new EntradaJoven(10.0);}
+		else if(tipoEntrada==4)	{
+			e = new EntradaTerceraEdad(10.0);}
+	
+		if (num_butacas_disponibles<=0 || !addEntrada(e)) return false;
+		this.num_butacas_disponibles--;
+		return true;
+	}
+
+	public String toString() {
+		return "\n\tSesion: " + pelicula.getTitulo() + " nº de sala: " + sala.getId() + "  Fecha: " + this.fecha;
+	}
+
+}

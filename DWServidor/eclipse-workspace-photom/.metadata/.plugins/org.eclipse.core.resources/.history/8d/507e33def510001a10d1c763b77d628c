@@ -1,0 +1,9 @@
+package factory2;
+
+public class FactoryFacturas {
+	public static Factura getFactura(String tipo) {
+		switch(tipo) {
+		
+		}
+	}
+}

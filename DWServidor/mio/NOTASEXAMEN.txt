@@ -1,0 +1,84 @@
+T0		----->solo java JSP (bucles, condicionales, clases, Array, Aleatoria)
+		Ej05,06 		--> Clase
+		EjeClase 		--> Array
+		EjerMasEjer 		--> Metodo <%! public String a(int) %>
+		Eje02 			--> hora <%=new java.util.Date()%>
+
+GET(carpeta)	-----> Pasar con get variables <a href="pag2.jsp?v1=563&v2=pepe"
+					int recibido = request.getParameter("v1");
+
+Formularios 	-----> Form en JSP GET y POST
+		AdivinaConSaldo		--> post envio y recepcion, pase
+							String saldo = request.getParameter("saldo");
+								si no existe saldo no creado aun devuelve un NULL
+							if(saldo != null)
+		checkSaldo 		--> radio,checkbox devuelve null si no esta marcado, fecha
+		formularioPromedio 	--> Path (solo absoluta), archivo, clase.
+		Hoteles	y Arraylist	--> for para checkbox y arraylist hoteles (clases)
+		SelectMultiple		--> textarea (rows, cols)
+		
+TrabajosObligatorios ------> IMG, SVNG, Post, JSP solo (a si mismo)
+		Carrusel,PaisesVisitador,AdivinaConSaldo --> Select multiple, cargar de Array, hacer en un solo JSP (variable != null) GETPARAMETERVALUES!!!
+		Demas				--> SVNG escoger
+	
+
+	
+										SERVLETS
+
+										
+AppGenerica	------> Calculadora basica servlet en actio no se pone "muestraAlgo" con .java
+
+SERVLETS	------> Calculadora ( clase usa Math.rint, TRY CATCH, POSITY infinite)
+					reques.getParameter("operacion").charAt(0);
+
+Informacion	 ------> GET en servlet para link, servlet sin vista de resultado(se muestra en servlet).
+
+		PeticionInformacion --> Basico
+		ServletReader		--> leer fichero basico, BUFFERED READER
+		Peticiones		--> index!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+							Creamos nuestro propio metodo en SERVLETS
+							Trabajamos con GET y Post
+		EscribirFichero 	--> IMPORTANTE trabaja con Path rutas
+		InfoContexto		--> archivos con rutas RELATIVAS
+		lecturaParametros 	--> basico SERVLET + HTML
+		lecturaParametrosV2 --> VARIOS pasados por GET usa ENUMMERATION
+
+ConGet		-----> GET pasado con un formularioPromedio
+		anexarDatos		--> Get con formulario, MVC, usa Archivo RUTA ABSOLUTS
+		index			--> Listar Archivo  -- Listar ArchivoDatos  ---> MuestraArchivos --> (ArrayList, get(i))!!!!!!!!!!!!!!!!!!!!!
+		
+fechas		------> usamos Calendar, localDate, localTime, localDateTime, simpleDateFormat, TRATAARCHIVOS( version inicial de Archivos.java)
+		Calendario		--> usa calendar , Metodo <%! _____ %> , Array
+		Date			--> usa Date, + complicado tener en cuenta (1900 y meses de 0 - 11) 
+		dateCalendarFecha 	-->usa simpleDateFormat con Date
+		Encuesta		--> timepo de responder (pulsar), BETWEEN tiempo, Guarda Archivo
+		Reserva			--> LocalDate, LocalTime, date, time, between
+		fechasDate		--> LocalDate
+		fechasTime		--> LocalTime
+		LocalDateTime		--> LocalDate y LocalTime
+		
+
+
+  Random r = new Random(); 
+   resultado = r.nextInt((maximo - minimo) + 1) + minimo;
+
+inyeccion formulario 
+	if(!nombre.isEmpty() && nombre.charAt(0)!='<');
+
+LocalTime t = LocalTime.now();
+out.println(t);
+
+Math.rint((op1 + op2)*1000)/1000;
+
+IOExcetion ServletException
+
+nombresParametros = request.getParameterNames();		//obtiene todos los parametros
+while(nombresParametros.hasMoreElements()) {
+	nombreParam = (String) nombresParametros.nextElement();
+	out.println("<h2>" + nombreParam);
+						
+	String[] valoresParam = request.getParameterValues(nombreParam);	//obtiene los valores
+	for(String nombre : valoresParam) {
+	out.println("<p>" + nombre + "</p>");
+}
+out.println("</h2>");

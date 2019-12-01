@@ -1,0 +1,12 @@
+package adapter;
+
+public class ViejaANuevaAdapter implements IPersonaNueva{
+
+	private IPersonaVieja vieja; 	//variable de referecia a la interfaz de IPersonaVieja
+
+	public ViejaANuevaAdapter(IPersonaVieja vieja) {
+		this.vieja = vieja;
+	}
+	
+	
+}

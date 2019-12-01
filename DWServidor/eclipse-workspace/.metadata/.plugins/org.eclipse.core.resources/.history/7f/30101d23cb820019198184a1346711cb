@@ -1,0 +1,253 @@
+package pruebas;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+import java.awt.FlowLayout;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.text.ParseException;
+
+import clasesPrincipales.*;
+
+public class PruebaCine extends JFrame{
+
+	
+	public static void guardaCine(Sala s,Pelicula p,Sesion se) {
+		FileOutputStream fos = null;
+		ObjectOutputStream salida = null;
+		try {
+			fos=new FileOutputStream("cine.dat",true);
+			salida = new ObjectOutputStream(fos);
+			salida.writeObject(s);
+			salida.writeObject(p);
+			salida.writeObject(se);
+		}catch(FileNotFoundException exc) {
+			System.out.println("1 " + exc.getMessage());
+		}catch(IOException exc) {
+			System.out.println("2 " + exc.getMessage());
+		}finally {
+			try {
+				if(fos!=null) {
+					fos.close();
+				}
+				if(salida!=null)
+					salida.close();
+			}catch(IOException exc) {
+				System.out.println(exc.getMessage());
+			}
+		}
+	}
+	
+	public static Cine leeCine() {
+		FileInputStream fis =null;
+		ObjectInputStream entrada = null;
+		Sala s =null;
+		Pelicula p =null;
+		Sesion se=null;
+		Cine c = new Cine("Cinesa", "Calle Mayor Nº4");
+		try {
+			fis=new FileInputStream("cine.dat");	
+			while(true) {
+				entrada = new ObjectInputStream(fis);
+				s=(Sala) entrada.readObject();
+				p=(Pelicula) entrada.readObject();
+				se=(Sesion) entrada.readObject();
+				c.add_sala(s);
+				c.add_sesion(se);
+				c.add_pelicula(p);
+			}
+		}catch(ClassNotFoundException exc) {
+			System.out.println("1 " + exc.getMessage());
+		}catch(FileNotFoundException exc) {
+			System.out.println("2 " + exc.getMessage());
+		}catch(IOException exc) {
+			System.out.println("3 " + exc.getMessage());
+		}finally {
+			try {
+				if(fis!=null) {
+					fis.close();
+				}
+				if(entrada!=null)
+					entrada.close();
+			}catch(IOException exc) {
+				System.out.println(exc.getMessage());
+			}
+		}
+		return c;
+	}
+	
+	public static void menu() throws ParseException, InputMismatchException {
+		int opcion = 0;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println(
+					"Seleccionar opcion:\n\t1)Crear pelicula, añadir fecha de sesion y guardar\n\t2)Cargar cine"
+							+ "\n\t3)Prueba automatica de 1 y 2\n\t4)Salir");
+			opcion = sc.nextInt();
+		} while (opcion < 0 || opcion > 4);
+		switch (opcion) {
+		case 1:/* comprobamos que no exista un cine (leemos) y si no existe creamos uno */
+			//System.out.println("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +PruebaCine.leeCine());
+			Cine c1 = PruebaCine.leeCine();
+			if( c1 == null) {
+				c1 = new Cine("Cinesa", "Calle Mayor Nº4");
+			}
+			
+			/* creamos una sala */
+			Sala s1 = c1.crearSala();
+			/* asignamos la peli al cine */
+			Pelicula p1 = c1.crear_pelicula();
+			/* creamos una sesion para la peli en ese cine */
+			Sesion se1 = c1.crearSesion(p1, s1);
+			System.out.println(
+					"==================================================================================================================");
+			System.out.println(c1.toString());
+			/* aniadimos al cine todo lo creado */
+			c1.add_sala(s1);
+			c1.add_sesion(se1);
+			c1.add_pelicula(p1);
+			System.out.println("\nAñadimos la película a una sesión y vemos si está en cartelera.\n");
+			c1.add_sesion(se1);
+			System.out.println(c1.enCartelera(p1));
+			/* mostramos todo lo que contiene */
+			System.out.println(
+					"\n\nAhora imprimimos todas las péliculas que están en el cine(no necesariamente en cartelera)\n");
+			System.out.println(c1.getPeliculas());
+			System.out.println(""
+					+ "\n\nAhora vamos a vender entradas para la sesión que acabamos de crear y a intentar comprar una "
+					+ "cuando las entradas estén agotadas.\n");
+
+			/* vendemos las entradas */
+			for (int i = 0; i <= s1.getButacas(); i++)
+				System.out.println(c1.venderEntrada(se1, (int) (Math.random() * (4 - 1 + 1) + 1)));// Se van vendiendo los diferentes tipos de entrada.
+
+			System.out.println("\n\nAhora veremos la recaudación que hemos conseguido con la película\n");
+
+			/*mostramos la recaudacion de la pelicula en funcion de las ventas de entradas*/
+			c1.recaudacionPelicula(p1);
+
+			PruebaCine.guardaCine(s1, p1, se1);
+			System.out.println("\n\tGuardado!");
+
+			break;
+
+		case 2:/* cargamos el cine del serializable y lo mostramos */
+			System.out.println(
+					"==================================================================================================================");
+			Cine c2 = PruebaCine.leeCine();
+			System.out.println("leido de cine: ");
+			
+			PruebaCine.creaVentana(c2);
+			//System.out.println(c2.toString());
+			break;
+
+		case 3:
+			Cine c3 = new Cine("Cinesa", "Calle Mayor Nº4");
+			Sala s2 = new Sala(10);
+			SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+			String fecha = "29/05/2019";
+			Pelicula p3 = c3.crear_pelicula_auto("La llamada", "Los javis", 2007, "Hoy he sentido la llamada.",
+					genero.FANTASIA);
+			Pelicula p4 = c3.crear_pelicula_auto("Black Phanter", "Ryan Coogler", 2018, "sinopsis blackPhanter",
+					genero.FANTASIA);
+			Sesion se2 = new Sesion(SimpleDateFormat.parse(fecha), p3, s2);
+			System.out.println(
+					"==================================================================================================================");
+
+			/* aniadimos al cine todo lo creado */
+			c3.add_sala(s2);
+			c3.add_sesion(se2);
+			c3.add_pelicula(p3);
+			c3.add_pelicula(p4);
+			System.out.println("\nAñadimos la película a una sesión y vemos si está en cartelera.\n");
+			//c3.add_sesion(se2);
+			System.out.println(c3.enCartelera(p3));
+			/* mostramos todo lo que contiene */
+			System.out.println(
+					"\n\nAhora imprimimos todas las péliculas que están en el cine(no necesariamente en cartelera)\n");
+			System.out.println(c3.getPeliculas());
+			System.out.println(""
+					+ "\n\nAhora vamos a vender entradas para la sesión que acabamos de crear y a intentar comprar una "
+					+ "cuando las entradas estén agotadas.\n");
+
+			/* vendemos las entradas */
+			for (int i = 0; i <= s2.getButacas(); i++)
+				System.out.println(c3.venderEntrada(se2, (int) (Math.random() * (4 - 1 + 1) + 1)));// Se van vendiendo los diferentes tipos de entrada.
+
+			System.out.println("\n\nAhora veremos la recaudación que hemos conseguido con la película\n");
+
+			/*mostramos la recaudacion de la pelicula en funcion de las ventas de entradas*/
+			c3.recaudacionPelicula(p3);
+
+			/* guardamos el cine como objeto serializable */
+			PruebaCine.guardaCine(s2, p3, se2);
+
+			System.out.println("======================================================================================");
+
+			/* cargamos el cine del serializable */
+			Cine c4 = PruebaCine.leeCine();
+			System.out.println("leido de cine: ");
+			System.out.println(c4.toString());
+			break;
+			
+		case 4: 
+			System.out.println(
+					"==================================================================================================================");
+			System.out.println("\nHasta Luego caracola!");
+			break;
+
+		default:
+			System.out.println(
+					"==================================================================================================================");
+			System.out.println("\nOpcion no contenida!");
+			break;
+		}
+
+	}
+	
+	public static void creaVentana(Cine c) {
+		JFrame f = new JFrame(); 
+		JLabel label;
+		JButton boton;
+		JTextArea jt;
+		JPanel p = new JPanel(); 
+		//f.setLayout(new FlowLayout());
+		jt = new JTextArea(c.toString(),10, 10); 
+		label = new JLabel("Lista de peliculas, Salas y Sesiones");
+		p.add(label);
+		p.add(jt);
+		boton = new JButton("Salir");
+		p.add(boton);
+		f.add(p); 
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setVisible(true);
+		f.setSize(800,600);
+		
+	}
+	
+	public static void main(String[] args) throws ParseException {
+	
+		try {
+		PruebaCine.menu();
+		}catch(ParseException ex) {
+			System.out.println("\tError!");
+		}catch(InputMismatchException ex) {
+			System.out.println("\tError al introducir la opcion!");
+		}
+
+	}
+}

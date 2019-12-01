@@ -1,0 +1,11 @@
+package factory2;
+
+public class FacturaNormal extends Factura{
+	
+	private double iva = 1.14;
+	
+	@Override
+	public double getImporteIva() {
+		return getImporte()*1.14;
+	}
+}

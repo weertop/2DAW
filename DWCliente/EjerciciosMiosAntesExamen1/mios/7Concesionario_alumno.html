@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Concesionario</title>
+<style>
+	table, tr, td {border:2px solid black; text-align:center; border-collapse:collapse;}
+	td, tr {width:200px; height:150px;}
+	div {text-align:left;}
+</style>
+<script language="JavaScript" type="text/javascript">
+
+	var tipo = ['1 Citroen','2 Citroen','3 Citroen','1 Nissan','2 Nissan','3 Nissan','1 Peugeot','2 Peugeot','3 Peugeot'];
+	var precioCoche = [30000,23500,22000,18000,15000,12000,34000,45000,11000];
+	var cont=0;
+
+	window.onload = function () {
+		document.getElementById('marca').onchange = seleccionCoche;
+		document.getElementById("tipo").onclick=imgTipo;				//ojoooooooooooooo si funciona si la etiqueta ya exitia antes tipo
+		var extras = document.getElementsByName('extras');
+		for(var i=0;i<extras.length;i++){
+			extras[i].onchange = precio;
+		}
+
+		var color = document.getElementsByName('color');
+		for(var i=0;i<color.length;i++){
+			color[i].onchange = precio;
+		}
+
+		seleccionCoche();												//con esto fuezo a que se ejecuten al cargar la pagina la primera vez
+		imgTipo();
+		precio();
+	}
+
+	var seleccionCoche = function () {
+		var imagen = document.getElementById('imagenMarca');
+		var seleccionTipo = document.getElementById('tipo');
+
+		borrarSelect();
+		switch (this.value) {
+			case'Peugeot':
+				imagen.src = '../imgConcesionario/Peugeot.jpg';
+				for(var i=0;i<3;i++){
+					var opcion = document.createElement('option');
+					opcion.id = i;
+					opcion.setAttribute('name','ids');
+					var tipoTemp = document.createTextNode(tipo[i]);
+					opcion.appendChild(tipoTemp);
+					seleccionTipo.appendChild(opcion);
+
+					if(i==0){
+						opcion.setAttribute('selected','selected');
+					}
+
+					//opcion.onclick = imgTipo;									//ojoooooooooooooooooooooooooo no funciona on change
+				}
+				break;
+			case'Citroen':
+				imagen.src = '../imgConcesionario/Citroen.jpg';
+				for(var i=3;i<6;i++){
+					var opcion = document.createElement('option');
+					opcion.id = i;
+					opcion.setAttribute('name','ids');
+					var tipoTemp = document.createTextNode(tipo[i]);
+					opcion.appendChild(tipoTemp);
+					seleccionTipo.appendChild(opcion);
+
+					if(i==3){
+						opcion.setAttribute('selected','selected');
+					}
+
+					//opcion.onclick = imgTipo;
+				}
+
+				break;
+			case'Nissan':
+				imagen.src = '../imgConcesionario/Nissan.jpg';
+				for(var i=6;i<9;i++){
+					var opcion = document.createElement('option');
+					opcion.id = i;
+					opcion.setAttribute('name','ids');
+					var tipoTemp = document.createTextNode(tipo[i]);
+					opcion.appendChild(tipoTemp);
+					seleccionTipo.appendChild(opcion);
+
+					if(i==6){
+						opcion.setAttribute('selected','selected');
+					}
+
+					//opcion.onclick = imgTipo;
+				}
+				break;
+		}
+	}
+
+	var imgTipo = function () {
+		var imagenTipo = document.getElementById('imagenTipo');
+		var elegido = this.value;
+
+		imagenTipo.src = '../imgConcesionario/Tipo ' + elegido + '.jpg';
+		precio();
+	}
+
+	var precio = function () {
+		var indice = 0;
+		//var recibido = this.value;
+		//console.log('que recibo-> ' + recibido);
+		//console.log('inidice-> ' + document.getElementById('marca').selectedIndex);
+		//console.log('inidice-> ' + document.getElementById('tipo').selectedIndex);
+		if(cont == 1){
+			borrarPrecio();
+		}
+
+		if(document.getElementById('marca').selectedIndex == 1){
+			indice = 3;
+		}else if(document.getElementById('marca').selectedIndex == 2){
+			indice = 6;
+		}
+		var precio = precioCoche[(document.getElementById('tipo').selectedIndex) + indice];
+		var precioColor = 0;
+		var precioExtra = 0;
+		console.log('que precio antes-> ' + precio);
+
+		var colores=document.getElementsByName("color");
+		var extras=document.getElementsByName("extras");
+
+		if(colores[0].checked){
+			precioColor=100;
+		}else if(colores[1].checked){
+			precioColor=200;
+		}else if(colores[2].checked){
+			precioColor=250;
+		}else if(colores[3].checked){
+			precioColor=300;
+		}else if(colores[4].checked){
+			precioColor=400;
+		}
+
+		if(extras[0].checked){
+			precioExtra=500;
+		}else if(extras[1].checked){
+			precioExtra=0;
+		}
+
+		/*if(recibido == 'con'){
+			precioExtra = 2000;
+		}else if(recibido == 'sin'){
+			precioExtra = 0;
+		}
+
+		switch(recibido){
+			case 'rojo':
+				precioColor = 300;
+				break;
+			case 'azul':
+				precioColor = 100;
+				break;
+			case 'verde':
+				precioColor = 250;
+				break;
+			case 'blanco':
+				precioColor = 400;
+				break;
+			case 'negro':
+				precioColor = 120;
+				break;
+
+		}*/
+		console.log('que precio despues-> ' + precio);
+		var mostrarPrecio = document.createElement('p');
+		mostrarPrecio.id = 'pre';
+		var valor = document.createTextNode(precio+precioColor+precioExtra);
+
+		mostrarPrecio.appendChild(valor);
+
+		document.getElementById('label').appendChild(mostrarPrecio);
+		cont=1;
+	}
+
+	var borrarSelect = function () {
+		var selecciones = document.getElementsByName('ids');
+		var i = selecciones.length;
+		while(i--){
+			selecciones[i].parentNode.removeChild(selecciones[i]);
+		}
+	}
+
+	var borrarPrecio = function () {
+		var seleccionesPrecio = document.getElementById('pre');
+		seleccionesPrecio.parentNode.removeChild(seleccionesPrecio);
+	}
+
+</script>
+<body>
+<form>
+	<table>
+		<tr>
+			<td>
+				<label>Marca:</label><br/>
+				<select id="marca" >
+					<option>Peugeot</option>
+					<option>Citroen</option>
+					<option>Nissan</option>
+				</select>
+			</td>
+			<td>
+				<label>Extras:</label><br/>
+				<div>
+				<input type="radio" name="extras" id="extras" value="con" >Con Extras <br/>
+				<input type="radio" name="extras" id="extras" value="sin"  checked>Sin Extras
+				</div>
+			</td>
+			<td rowspan="2"><img id="imagenMarca" src="" width="200"></td>
+			
+		</tr>
+		<tr>
+			<td>
+				<label>Tipo:</label><br/>
+				<select id="tipo" >
+				</select>
+			</td>
+			<td>
+				<label>Color:</label><br/>
+				<div>
+				<input type="radio" name="color" id="color" value="rojo"  checked>Rojo <br/>
+				<input type="radio" name="color" id="color" value="azul" >Azul <br/>
+				<input type="radio" name="color" id="color" value="verde" >Verde <br/>
+				<input type="radio" name="color" id="color" value="blanco" >Blanco <br/>
+				<input type="radio" name="color" id="color" value="negro" >Negro
+				
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><img id="imagenTipo" src="" width="200"></td>
+			<td id="celda"><label id="label"></label></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

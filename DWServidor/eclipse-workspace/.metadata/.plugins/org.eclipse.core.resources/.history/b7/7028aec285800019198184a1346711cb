@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
+		
+		Comentario c1 = new Comentario("hola mundo",false);
+		Comentario c2 = new Comentario("si hola",true);
+		
+		c1.mostrarComenResp();
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package factory;
+
+public class FactoryFigura {
+	public static Figura getFigura(String tipo) {
+		
+		if(tipo.equals("circulo")) {
+			return new Circulo();
+		}else {
+			return new Rectangulo();
+		}
+		
+	}
+}

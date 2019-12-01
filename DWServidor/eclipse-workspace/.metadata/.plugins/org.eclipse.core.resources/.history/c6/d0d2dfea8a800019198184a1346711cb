@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
+		
+		Comentario c1 = new Comentario("hola mundo");
+		c1.responderC("hola caracola");
+		c1.responderC("hola2");
+		
+		Comentario.mostrarComenResp(c1);
+
+	}
+
+}

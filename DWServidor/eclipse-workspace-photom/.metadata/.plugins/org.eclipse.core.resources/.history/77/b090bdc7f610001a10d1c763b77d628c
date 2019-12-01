@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li><a href="fact.jsp">Probar patron factory</a></li>
+		<li><a href="fact.jsp">Probar patron adapter</a></li>
+		<li><a href="fact.jsp">Probar patron command</a></li>
+	</ul>
+</body>
+</html>

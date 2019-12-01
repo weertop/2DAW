@@ -1,0 +1,31 @@
+package clasesPrincipales;
+
+/*
+ Esta clase abstracta se referira a las Entradas, es abstracta ya que posee
+ varias subclases dependiendo del tipo de entrada: Joven, normal, tercera edad,etc  
+ */
+
+public abstract class Entradas {
+	
+	private double precioEntrada;
+	
+	public Entradas(double precioEntrada){
+		this.precioEntrada=precioEntrada;
+	}
+	
+	/**
+	 * Metodo para obtener un precio de entrada
+	 * @return this.precioEntrada
+	 */
+	public double getprecioEntrada(){
+		return this.precioEntrada;
+	}
+	
+	/**
+	 * Metodo abstracto para obetner el precio de
+	 * la entrada, se devera codificar el metodo en 
+	 * las subclases
+	 * @return
+	 */
+	public abstract double getPrecio();
+}

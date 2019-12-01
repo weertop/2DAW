@@ -1,0 +1,23 @@
+package pruebas;
+
+import clasesPrincipales.*;
+
+public class PeliculaPrueba {
+
+	public static void main(String[] args) {
+
+		/*creamos 2 peliculas*/
+		
+		//Pelicula p1 = new Pelicula("La llamada", "Los javis", 2007, "Hoy he sentido la llamada.", genero.MUSICAL);
+		Pelicula p1 = PruebaCine.creaPelicula();
+		System.out.println("Imprimimos la primera película");
+
+		System.out.println(p1);
+
+		Pelicula p2 = new Pelicula("Black Phanter", "Ryan Coogler", 2018, "sinopsis blackPhanter", genero.FANTASIA);
+
+		System.out.println("\nImprimimos la segunda película:");
+		System.out.println(p2);
+
+	}
+}

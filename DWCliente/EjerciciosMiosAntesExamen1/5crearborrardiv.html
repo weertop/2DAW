@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 13 - DOM básico y atributos XHTML</title>
+ 
+<script type="text/javascript">
+var nun=1;
+window.onload=function(){
+	document.getElementById("poner").onclick=crear;
+	document.getElementById("quitar").onclick=eliminatodas;
+}
+function crear() {
+	
+	
+		var division = document.createElement("Div");
+		var texto = document.createTextNode("division"+ nun);
+		division.appendChild(texto);
+		document.body.appendChild(division);
+ 
+		var parrafo = document.createElement("p");
+		var textop = document.createTextNode("parrafo"+ nun + "de la division"+ nun);
+		parrafo.appendChild(textop);
+		division.appendChild(parrafo);
+		
+		var boton=document.createElement("input");
+		boton.type="button";
+		boton.value="borrar";
+		division.appendChild(boton);
+		nun++;
+		boton.onclick=borrauna;
+	}
+function eliminatodas() {
+	var divisiones=document.getElementsByTagName("Div");
+	var longitud=divisiones.length;
+	
+	for(var i = 0; i < longitud; i++)  {
+	divisiones[0].parentNode.removeChild(divisiones[0]);
+}
+}
+
+function borrauna() {
+var division=this.parentNode;
+division.parentNode.removeChild(division);
+}
+ 
+</script>
+</head>
+ 
+<body>
+ 
+
+ 
+<input type="button" value="anadir div" id="poner" >
+<input type="button" value="borrar todas" id="quitar">
+</body>
+</html>

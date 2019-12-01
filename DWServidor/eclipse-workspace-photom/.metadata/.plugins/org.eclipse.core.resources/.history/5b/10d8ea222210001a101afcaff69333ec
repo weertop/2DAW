@@ -1,0 +1,9 @@
+package factory;
+
+public class HacerFiguras {
+
+	public static void main(String[] args) {
+		Figura f = FactoryFigura.getFigura("circulo");
+		
+	}
+}

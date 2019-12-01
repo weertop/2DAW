@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class Comentario {
+	
+	private int id=0;
+	private String comentario;
+	//private boolean resp = false;
+	ArrayList<Comentario> respuestas;
+
+	public Comentario(String coment) {
+		// respuestas = new ArrayList<Comentario>();
+			this.comentario = coment;
+			this.id++;
+	}
+		
+	public void responderC (String resp, Comentario co) {
+		if(co.respuestas.equals(null)) {							//cambiar por un metodo get
+			respuestas = new ArrayList<Comentario>();
+			this.respuestas.add(co);
+			this.id++;
+			//return true;
+		}else if(co.respuestas.size() > 0){
+			this.respuestas.add(co);
+			this.id++;
+			//return true;
+		}else {
+			System.out.println("error no se ecnontro ese comentario");
+			//return false;
+		}
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void mostrarComenResp() {
+		System.out.println(this.comentario);
+		Iterator it = respuestas.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Comentario [id=" + id + ", comentario=" + comentario + "]";
+	}
+	
+	
+}

@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
+		
+		Comenatario c1 = new Comentario();
+
+	}
+
+}

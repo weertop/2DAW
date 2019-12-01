@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="factory2.*,java.time.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%LocalDate l = LocalDate.now(); %>
+
+<form action="resuelveFiguras" method="post">
+	<p>Elige figura
+		<select name="fig" request>
+			<option value="circulo">Circulo</option>
+			<option value="rectangulo">Rectangulo</option>
+		</select>
+	</p>
+	<p>Elige color
+		<select name="color" request>
+			<option value="red">Rojo</option>
+			<option value="blue">Azul</option>
+			<option value="magenta">Magenta</option>
+			<option value="pink">Pink</option>
+		</select>
+	</p>
+	<p>Medida
+		<input type="number" name="medida" min="60" max="150" required/>
+	</p>
+	<p><input type="submit" name="enviar" value="enviar" />
+	</p>
+</form>
+</body>
+</html>

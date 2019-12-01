@@ -1,0 +1,9 @@
+package adapter;
+
+public interface IPersonaVieja {
+	public String getNombre();
+	public int getEdad();
+	
+	public void setNombre(String nombre);
+	public void setEdad(int edad);
+}

@@ -1,0 +1,160 @@
+package clasesPrincipales;
+import java.io.Serializable;
+import java.util.*;
+
+/*
+ Esta aplicacion se centra en un Cine real, encargada de trabajar con las demas clases: Sala, Sesion, Pelicula,etc 
+ */
+
+public class Cine implements Serializable{
+	
+	private String nombre;
+	private String direccion;
+	private ArrayList<Pelicula> ListaPeliculas = new ArrayList<Pelicula>();
+	private ArrayList<Sala> ListaSalas = new ArrayList<Sala>();
+	private ArrayList<Sesion> ListaSesiones = new ArrayList<Sesion>();
+
+	public Cine(String nombre, String direccion){
+		this.nombre=nombre;
+		this.direccion=direccion;
+	}
+	
+	/*
+	 Metodo encargado de aniadir una pelicula a la ListaPeliculas mediante el metodo add.
+	 */
+	public boolean add_pelicula(Pelicula pelicula){
+		return ListaPeliculas.add(pelicula);
+	}
+	
+	/*
+	 Metodo encargado de a√±adir una sala a la ListaSalas mediante el metodo add.
+	 */
+	public boolean add_sala(Sala sala){
+		return ListaSalas.add(sala);
+	}
+	
+	/*
+	 Metodo encargado de a√±adir una sesion a la ListaSesiones mediante el metodo add.
+	 */
+	public boolean add_sesion(Sesion sesion){
+		return ListaSesiones.add(sesion);
+	}
+
+	/*
+	 Metodo encargdo de crear una Pelicula con los datos que recibamos, comprobaremos que el a√±o no sea negativo o 0
+	 */
+	public Pelicula crear_pelicula(){
+		/*if (anno<0) return null;
+		return new Pelicula(nombre, director, anno, sinopsis, genero);*/
+		String titulo;
+		String director;
+		int anno;
+		String sinopsis;
+		genero genero = null;
+		Pelicula p = null;
+		int opcionTipo;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("\nIntroduce el titulo: ");
+		titulo = sc.nextLine();
+		System.out.print("Introduce el director: ");
+		director = sc.nextLine();
+		do {
+		System.out.print("Introduce el aÒo: ");
+		anno = sc.nextInt();
+		sc.nextLine();
+		}while(anno<0);
+		System.out.println("Introduce el sinopsis: ");
+		sinopsis = sc.nextLine();
+		System.out.println("\nIntroduce el genero:\n\t1)TERROR\n" + 
+				"\t2)FANTASIA\n" + 
+				"\t3)DRAMA\n" + 
+				"\t4)COMEDIA\n" + 
+				"\t5)TRHILLER, ");
+		opcionTipo = sc.nextInt();
+		switch (opcionTipo) {
+			case 1: genero=genero.TERROR;
+			case 2: genero=genero.FANTASIA;
+			case 3: genero=genero.DRAMA;
+			case 4: genero=genero.COMEDIA;
+			case 5: genero=genero.TRHILLER;
+		}
+		
+		p = new Pelicula(titulo, director, anno, sinopsis, genero);
+		
+		return p;
+	}
+
+	/*
+	 Metodo getter para obetener la Lista de peliculas
+	 */
+	public ArrayList<Pelicula> getPeliculas(){
+		return ListaPeliculas;
+	}
+
+	/*
+	 Metodo encargado de Eliminar una Pelicula de la cartelera, buscara en que salas
+	 se proyectaba la pelicula y la quitara devolviendo el numero de sesiones eliminadas
+	 */
+	public int removePeliculaCartelera(Pelicula peli){
+		int tamanio;
+		tamanio=enCartelera(peli).size();
+		if( ListaPeliculas.remove(peli)==false ) return -1;
+		System.out.println("Pelicula eliminada correctamente, numero de sesiones eliminadas en todas las salas: "+ tamanio);
+		return tamanio;
+	}
+
+	/*
+	 Metodo encargado de colocar peliculas EnCartelera, crearemos un array de sesion
+	 en el que se a√±adiran las peliculas que tengan sesiones ya programadas.
+	 devolveremos dicha lista.
+	 */
+	public ArrayList<Sesion> enCartelera(Pelicula pelicula){
+		ArrayList<Sesion> pelisEnCartelera = new ArrayList<Sesion>();
+
+		for(Sesion aux: ListaSesiones){
+			if(aux.getPelicula().equals(pelicula)){
+				pelisEnCartelera.add(aux);
+			}
+			return pelisEnCartelera;
+		}
+		return null;
+	}
+
+	/*
+	 Metodo encargado de vender una entrada, recibiendo una sesion y el tipo de entrada
+	 aplicaremos el metodo venta de dicha sesion y mostraremos un mensaje por pantalla
+	 de si fue correcto o no.
+	 */
+	public boolean venderEntrada(Sesion sesion, int tipoEntrada){
+		boolean status;
+		status=sesion.venta(tipoEntrada);
+		if(status==false) {
+			System.out.println("Las entradas est·n agotadas para esta sesiÛn");
+			return false;
+		}
+		System.out.println("La pelicula " + sesion.getPelicula().getTitulo() + " se proyecta en la sala " +
+				sesion.getSala().getId());
+		return status;
+	}
+
+	/*
+	 Meotodo para verficar lo recaudado por una peli, verificara esta en la lista de peliculas
+	 que tengan sesiones e ira sumando lo recaudado para devolverlo.
+	 */
+	public double recaudacionPelicula(Pelicula peli) {
+		double recaudado=0;
+		if(ListaPeliculas.contains(peli)==false) return -1;
+		for(Sesion aux:ListaSesiones){
+			if(aux.getPelicula().equals(peli)){
+				recaudado+=aux.recaudado();
+			}
+		}
+		System.out.println("Con la pelicula: " + peli.getTitulo() + " se han recaudado " + recaudado + "Ä" );
+		return recaudado;
+	}
+	
+}
+
+

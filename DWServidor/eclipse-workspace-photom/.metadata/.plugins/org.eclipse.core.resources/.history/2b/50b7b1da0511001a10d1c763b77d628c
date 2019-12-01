@@ -1,0 +1,7 @@
+package adapter;
+
+public class PersonaVieja {
+	private String nombre;
+	private String apellido;
+	private String fechaNacimiento;
+}

@@ -1,0 +1,6 @@
+package adapter;
+
+public class PersonaNueva implements IPersonaNueva{
+	private String nombre;			//incluye nombre y apellidos
+	private int edad;
+}

@@ -1,0 +1,6 @@
+127.0.0.1 - - [26/Nov/2019:09:31:40 +0100] "GET / HTTP/1.1" 404 956
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:09:31:42 +0100] "GET /2patrones/index.html HTTP/1.1" 200 310
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:09:31:44 +0100] "GET /favicon.ico HTTP/1.1" 404 967
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:09:31:46 +0100] "GET /2patrones/fact.jsp HTTP/1.1" 200 730
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:09:31:52 +0100] "POST /2patrones/resuelveFiguras HTTP/1.1" 200 391
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:09:32:05 +0100] "POST /2patrones/resuelveFiguras HTTP/1.1" 200 397

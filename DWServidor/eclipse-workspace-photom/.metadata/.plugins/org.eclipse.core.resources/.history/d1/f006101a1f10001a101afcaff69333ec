@@ -1,0 +1,6 @@
+package factory;
+
+public abstract class Figura {
+	private int medida;
+	private String color;
+}

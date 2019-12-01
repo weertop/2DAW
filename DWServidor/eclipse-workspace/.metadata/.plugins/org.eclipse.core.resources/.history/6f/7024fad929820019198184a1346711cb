@@ -1,0 +1,31 @@
+package clasesPrincipales;
+/*
+ Esta es una subclase de Entradas que hereda sus atributos y metodo al que sobreescribe  
+ */
+
+public class EntradaTerceraEdad extends Entradas{
+	/**
+	 * Atributo de EntradaTercaraEdad
+	 */
+	private double descuento= 0.6;  //descuento del 40%
+	
+	/**
+	 * Contructor de EntradaTerceraEdad
+	 * @param precioEntrada
+	 */
+	public EntradaTerceraEdad(double precioEntrada) {
+		super(precioEntrada);
+	}
+	
+	/**
+	 * Metodo sobreescrito para esta subclase, getPrecio() devolvera
+	 * una llamada a getprecioEntrada() de la clase superior, esta contiene
+	 * el precio y ademas le multiplica por el descuento
+	 * @return getprecioEntrada();
+	 */
+	public double getPrecio() {
+		return super.getprecioEntrada()*descuento;
+	}
+	
+	
+}

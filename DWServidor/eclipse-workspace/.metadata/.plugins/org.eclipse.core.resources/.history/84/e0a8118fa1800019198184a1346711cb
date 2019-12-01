@@ -1,0 +1,42 @@
+package Pruebas;
+
+import java.text.SimpleDateFormat;
+
+import clases.*;
+
+import java.text.ParseException;
+
+public class PruebaCine {
+	public static void main(String[] args) throws ParseException {
+
+	//Declaración de variables necesarias.
+ Sala s1= new Sala(10);
+
+ SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+ String fecha="11/03/2018";
+ Cine c1 = new Cine("Cinesa", "Calle Mayor Nº4");
+ Pelicula p1= c1.crear_pelicula("La llamada", "Los javis", 2007, "Hoy he sentido la llamada.", genero.MUSICAL);
+ Pelicula p2= c1.crear_pelicula("Black Phanter", "Ryan Coogler", 2018, "sinopsis blackPhanter", genero.FANTASIA);
+ Sesion se1 = new Sesion(SimpleDateFormat.parse(fecha), p1, s1);
+ 
+ System.out.println("Sin ninguna película asociada a una sesión vemos si nos señala que haya algo en cartelera.(Devuelve un null)");
+ System.out.println(c1.enCartelera(p1));
+ c1.add_sala(s1);
+ c1.add_sesion(se1);
+ c1.add_pelicula(p1);
+ c1.add_pelicula(p2);
+ System.out.println("Añadimos la película a una sesión y vemos si está en cartelera.");
+ c1.add_sesion(se1);
+ System.out.println(c1.enCartelera(p1));
+ 
+ System.out.println("Ahora imprimimos todas las péliculas que están en el cine(no necesariamente en cartelera)");
+ System.out.println(c1.getPeliculas());
+ System.out.println("Ahora vamos a vender entradas para la sesión que acabamos de crear y a intentar comprar una cuando las entradas estén agotadas.");
+ 
+ for(int i=0; i<=10; i++)
+ System.out.println(c1.venderEntrada(se1, (i%4)+1));//Se van vendiendo los diferentes tipos de entrada.
+
+ System.out.println("Ahora veremos la recaudación que hemos conseguido con la película");
+ c1.recaudacionPelicula(p1);
+	}
+}

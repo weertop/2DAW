@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio </title>
+
+<script type="text/javascript">
+
+	window.onload = function(){
+		document.getElementById('start').onclick = parrafo;
+	}
+
+	var parrafo = function(){
+		/*var div = document.createElement('div');
+		div.id = 'divi';
+		document.body.appendChild(div);*/
+
+		var parrafo = document.createElement('p');
+		var negrita = document.createElement('strong');
+		var texto = document.createTextNode('Este es un parrafo ');
+		var textNeg = document.createTextNode(' escrito en negrita');
+		var textCon = document.createTextNode(' mas texto');
+
+		negrita.appendChild(textNeg);
+		parrafo.appendChild(texto);
+		parrafo.appendChild(negrita);
+		parrafo.appendChild(textCon);
+
+		document.body.appendChild(parrafo);
+		//document.getElementById('divi').appendChild(parrafo);
+	}
+
+</script>
+</head>
+
+<body>
+	
+	<input type= "button" id = "start" value = "Start" />
+	
+</body>
+</html>

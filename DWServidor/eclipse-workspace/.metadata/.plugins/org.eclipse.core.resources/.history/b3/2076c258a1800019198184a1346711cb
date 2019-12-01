@@ -1,0 +1,70 @@
+package Clases;
+import java.util.*;
+
+/**
+ * Esta clase contiene la informacion sobre las salas en las que se
+ * se proyectaran las peliculas en el cine
+ * @author Alberto Camara, Alexis Calderon
+ *
+ */
+
+public class Sala {
+	/**
+	 * Atributos de Sala
+	 */
+	private static int cont=1;   //atributo de tipo constante para asignarlo fijo a una sala
+	private int id;
+	private int butacas;
+	private ArrayList<Sesion> sesiones= new ArrayList<Sesion>();  //Array de sesiones
+	
+	/**
+	 * Constructor de Sala, podemos ver que para asignar un id a una sala usamos la constante
+	 * "cont" asi la primera vez sera la sala id 1, el contador incrementa y la segunda vez sera 2
+	 * @param butacas
+	 */
+	public Sala(int butacas) {
+		this.id=Sala.cont;
+		Sala.cont++;
+		this.butacas=butacas;
+	}
+	
+	/**
+	 * Metodos getters y setter de Sala
+	 * @return
+	 */
+	public int getButacas() {
+		return butacas;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+
+	/**
+	 * Metodo add_sesion, este aÃ±adira una sesion a la lista de sesiones
+	 * a una Sala si esta sesion tiene la misma fecha, con esto conseguimos
+	 * que una pelicula se emita en una sala.
+	 * @param sesion
+	 * @return sesiones.add(sesion)
+	 */
+	public boolean add_sesion(Sesion sesion){
+		for(Sesion aux: sesiones) {
+			if(aux.getFecha().equals(sesion.getFecha()))
+				return false;
+		}
+		return sesiones.add(sesion);	
+	}
+	
+
+
+	/**
+	 * @brief toString
+	 * 
+	 * Método que muestra la información de la clase Sala
+	 * @return el String con la infromación.
+	 */
+	public String toString() {
+		return "Sala número " + id + "  Num butacas: "+ butacas; 
+	}
+	
+}

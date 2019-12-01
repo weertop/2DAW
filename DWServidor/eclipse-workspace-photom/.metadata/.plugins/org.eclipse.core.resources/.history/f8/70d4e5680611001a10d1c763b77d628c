@@ -1,0 +1,11 @@
+package adapter;
+
+public interface IPersonaVieja {
+	public String getNombre();
+	public String getApellidos();
+	public LocalDate getFecha();
+	
+	public void setNombre(String nombre);
+	public void setApellidos(String apellidos);
+	public void getFecha(LocalDate fechaNacimiento);
+}

@@ -1,0 +1,12 @@
+package clasesPrincipales;
+/*
+ Esta clase es una enumeracion de los tipos de peliculas para la clase Pelicula 
+*/
+
+public enum genero {
+	TERROR,
+	FANTASIA,
+	DRAMA,
+	COMEDIA,
+	TRHILLER,
+}

@@ -1,0 +1,13 @@
+package adapter;
+
+import java.time.LocalDate;
+
+public interface IPersonaVieja {
+	public String getNombre();
+	public String getApellidos();
+	public LocalDate getFecha();
+	
+	public void setNombre(String nombre);
+	public void setApellidos(String apellidos);
+	public void setFechaNacimiento(LocalDate fechaNacimiento);
+}

@@ -1,0 +1,5 @@
+package factory2;
+
+public class FacturaReducida extends Factura{
+
+}

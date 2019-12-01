@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class Comentario {
+	
+	private static int id=0;
+	private static String comentario;
+	//private boolean resp = false;
+	private static ArrayList<Comentario> respuestas;
+
+	public Comentario(String coment) {
+		// respuestas = new ArrayList<Comentario>();
+			this.comentario = coment;
+			respuestas = new ArrayList<Comentario>();
+			this.id++;
+	}
+		
+	public static void responderC (String resp, Comentario co) {
+		Comentario temp = new Comentario(resp);
+		co.respuestas.add(temp);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void mostrarComenResp() {
+		System.out.println(this.comentario.toString());
+		
+		Iterator it = this.respuestas.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Comentario [id=" + id + ", comentario=" + comentario + "]";
+	}
+	
+	
+}

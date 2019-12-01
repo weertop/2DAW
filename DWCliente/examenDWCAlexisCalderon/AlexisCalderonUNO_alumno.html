@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EJERCICIO 1</title>
+         <script type="text/javascript" >
+             //boolean para saber si es negrita o no
+             var esNegrita = false;
+
+             window.onload = function(){
+                 document.getElementById('anadir').onclick = aniadir;
+                 document.getElementById('negrita').onclick = negrita;
+                 document.getElementById('borrar').onclick = borrar;
+             }
+
+             //aniade los parrafos normales o en negrita
+             var aniadir = function () {
+                 var textoUsuario = prompt('Introduce texto');
+
+                 var parrafo = document.createElement('p');
+                 var texto = document.createTextNode(textoUsuario);
+                 parrafo.setAttribute('name','parrafo');
+                 //condicion para aplicar strong o solo aniadir al parrafo
+                 if(esNegrita){
+                     var negrita = document.createElement('strong');
+                     negrita.appendChild(texto);
+                     parrafo.appendChild(negrita);
+                     esNegrita = false;
+                 }else{
+                     parrafo.appendChild(texto);
+                 }
+                 document.getElementById('contenedor').appendChild(parrafo);
+             }
+             //cambia el boolean para que el siguiente parrafo sea negrita
+             var negrita = function () {
+                 esNegrita = true;
+                 alert('Negrita activado ahora debes darle a parrafo =)');
+             }
+
+             //borrar los parrafos creados
+             var borrar = function () {
+                var parrafos = document.getElementsByName('parrafo');
+                var i = parrafos.length;
+                while(i--){
+                    parrafos[i].parentNode.removeChild(parrafos[i]);
+                }
+             }
+         </script>
+    </head>
+        <body>
+          
+          <div id="contenedor">
+             <div id="botones">
+				<input type="button" id="anadir" value="AÑADIR PARRAFO">
+				<input type="button" id="negrita" value="NEGRITA">
+				<input type="button" id="borrar" value="BORRAR PARRAFO">
+              </div>
+			  
+          </div>    
+          
+        </body>
+</html>

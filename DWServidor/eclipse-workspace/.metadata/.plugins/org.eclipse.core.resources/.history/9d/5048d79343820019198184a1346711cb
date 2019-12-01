@@ -1,0 +1,80 @@
+package pruebas;
+
+import java.util.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import clasesPrincipales.*;
+
+public class TesterSala {
+
+	public static void main(String[] args) throws ParseException {
+
+		
+		/*Sala primera = new Sala(20);
+		Sala segunda = new Sala(30);
+		Sala tercera = new Sala(40);*/
+		
+		/*Creamos 3 salas de cine primera, segunda, tercera*/
+		
+		Sala primera = PruebaCine.crearSala();
+		Sala segunda = PruebaCine.crearSala();
+		Sala tercera = PruebaCine.crearSala();
+
+		/*Mostramos la informacion obtenida*/
+		System.out.println("La primera " + primera.toString());
+		System.out.println("La segunda " + segunda.toString());
+		System.out.println("La tercera " + tercera.toString());
+
+		/*Ahora vamos a comprobar el metodo add_sesion para lo cual debemos crear
+		 peliculas y sesiones en concreto 2 peliculas y 3 sesiones, probaremos aniadir*/
+		
+		/*Pelicula nuevaPeli1 = new Pelicula("La Forma Del Agua", "Guillermo Del Toro", 2018,
+				"Pelicula sobre el amor y sus interpretaciones", genero.DRAMA);
+		Pelicula nuevaPeli2 = new Pelicula("Pacific Rim", "Guillermo Del Toro", 2015, "Robots gigantes",
+				genero.FANTASIA);*/
+		Pelicula nuevaPeli1 = PruebaCine.creaPelicula();
+		Pelicula nuevaPeli2 = PruebaCine.creaPelicula();
+
+		/*SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+		String fecha = "10/10/2018";
+		Sesion sesionPremier = new Sesion(SimpleDateFormat.parse(fecha), nuevaPeli1, primera);*/
+		
+		Sesion sesionPremier = PruebaCine.crearSesion(nuevaPeli1, primera);
+		System.out.println("\n" + sesionPremier.toString());
+
+		/*
+		 Comprobaremos si se aniaden correctamente y lo mostraremos en pantalla
+		 */
+		boolean sesionAniadida1 = primera.add_sesion(sesionPremier);
+		if (sesionAniadida1 == true) {
+			System.out.println(nuevaPeli1.getTitulo() + " se proyectara en la sala " + primera.getId());
+		} else
+			System.out.println(nuevaPeli1.getTitulo() + "ya posee una sala asignada" + sesionPremier.getSala());
+
+		/*
+		 Aniadimos otra sesion con otra fecha
+		 */
+
+		String fecha2 = "12/12/2018";
+		Sesion sesionPremier2 = new Sesion(SimpleDateFormat.parse(fecha2), nuevaPeli2, segunda);
+		boolean sesionAniadida2 = primera.add_sesion(sesionPremier2);
+		System.out.println("\n" + sesionPremier2.toString());
+		if (sesionAniadida2 == true) {
+			System.out.println(nuevaPeli2.getTitulo() + " se proyectara en la sala " + segunda.getId());
+		} else
+			System.out.println(nuevaPeli2.getTitulo() + "ya posee una sala asignada" + sesionPremier2.getSala());
+
+		/*
+		 Declaramos la misma fecha que el anterior por lo que deberia fallar al aniadir la sesion ya que existe una con esa fecha en otra sala
+		 */
+
+		Sesion sesionPremier3 = new Sesion(SimpleDateFormat.parse(fecha2), nuevaPeli2, tercera);
+		boolean sesionAniadida3 = primera.add_sesion(sesionPremier3);
+		System.out.println("\n" + sesionPremier3.toString());
+		if (sesionAniadida3 == true) {
+			System.out.println(nuevaPeli2.getTitulo() + " se proyectara en la sala " + tercera.getId());
+		} else
+			System.out.println(nuevaPeli2.getTitulo() + " ya posee una sala asignada, " + sesionPremier2.getSala());
+
+	}
+}

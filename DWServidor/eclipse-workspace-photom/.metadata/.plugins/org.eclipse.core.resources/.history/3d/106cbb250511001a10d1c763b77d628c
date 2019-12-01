@@ -1,0 +1,5 @@
+package adapter;
+
+public class PersonaNueva {
+	private String nombre;			//incluye nombre y apellidos
+}

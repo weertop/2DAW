@@ -1,0 +1,30 @@
+package adapter;
+
+public class ViejaANuevaAdapter implements IPersonaNueva{
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getEdad() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setNombre(String nombre) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setEdad(int edad) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

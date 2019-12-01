@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 13 - DOM básico y atributos XHTML</title>
+ 
+<script type="text/javascript">
+	var numDiv =1;
+
+	window.onload = function(){
+		document.getElementById('poner').onclick = crearDiv;
+		document.getElementById('quitar').onclick = borrarTodo;
+
+		//ojooooooooooooooooooooooooooooooooooooooooooooooooooooooooo  no se puede con cosas creadas despues de cargar pagina
+        /*var a = document.getElementsByName('botonNombre');
+        for(var i=0;i<a.length;i++){
+            a[i].onclick = eliminarUno;
+        }*/
+	}
+
+	var crearDiv = function(){
+		var div = document.createElement('div');
+		var titulo = document.createElement('h1');
+		var textTitulo = document.createTextNode('DIV' + numDiv);
+		var par = document.createElement('p');
+		var texto = document.createTextNode('contiene el div ' + numDiv);
+		var boton = document.createElement('input');
+		boton.type = 'button';
+		boton.value = 'borrar';
+		boton.id = 'btn';
+        boton.name = 'botonNombre';
+
+		titulo.appendChild(textTitulo);
+		par.appendChild(texto);
+		div.appendChild(titulo);
+		div.appendChild(par);
+		div.appendChild(boton);
+		
+		document.body.appendChild(div);
+
+        boton.onclick = eliminarUno;                    //ojooooooooooooooooooooooooooooooooooooooo para borrar solo el que se presiona solo se le puede llamar desde aqui
+
+		numDiv++;
+	}
+
+	var eliminarUno = function(){
+	    var este = this.parentNode;
+	    este.parentNode.removeChild(este);
+    }
+
+	var borrarTodo = function(){
+		var divsBorrar = document.getElementsByTagName('div');
+        var i = divsBorrar.length;
+        while(i--){
+            divsBorrar[i].parentNode.removeChild(divsBorrar[i]);           //ojoooooooooooo borrar elementos de select
+        };
+		/*for(var i=0;i<tam;i++){
+		    divsBorrar[0].parentNode.removeChild(divsBorrar[0]);            //ojoooooooooooooooooooooooooooooooooooooooo
+        }*/
+		//divsBorrar.parentNode.removeChild(divsBorrar);
+		numDiv=1;
+	}
+/*
+var markerDiv = document.createElement("div");
+markerDiv.innerHTML = "<div id='MyCoolDiv' style='color: #2b0808'>123</div>";
+document.getElementById("playerContainer").appendChild(markerDiv.firstChild);
+// -------------------------------------------------------------^^^^^^^^^^^
+
+setTimeout(function(){
+    var myCoolDiv = document.getElementById("MyCoolDiv");
+    document.getElementById("playerContainer").removeChild(myCoolDiv);
+}, 1500);
+
+<div id="playerContainer"></div>
+
+Or without using the wrapper (although it's quite handy for parsing that HTML):
+
+var myCoolDiv = document.createElement("div");
+// Don't reall need this: myCoolDiv.id = "MyCoolDiv";
+myCoolDiv.style.color = "#2b0808";
+myCoolDiv.appendChild(
+  document.createTextNode("123")
+);
+document.getElementById("playerContainer").appendChild(myCoolDiv);
+
+setTimeout(function(){
+    // No need for this, we already have it from the above:
+    // var myCoolDiv = document.getElementById("MyCoolDiv");
+    document.getElementById("playerContainer").removeChild(myCoolDiv);
+}, 1500);
+
+<div id="playerContainer"></div>
+ */
+
+</script>
+</head>
+ 
+<body>
+ 
+
+ 
+<input type="button" value="anadir div" id="poner" >
+<input type="button" value="borrar todas" id="quitar">
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--formulario q pide nombre y edad, lo recoge en dos arrays (nombres y edades) 
+y luego mostrar el nombre del mayor y del menor de los introducidos con su edad-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>FORMULARIO NOMBRE, EDAD Y MOSTRAR</title>
+<script language="JavaScript" type="text/javascript">
+
+	var nombres = [];
+	var edades = []; 
+
+	window.onload = function(){
+
+		document.getElementById('guard').onclick = guardar;
+
+		document.getElementById('most').onclick = mostrar;
+	}
+
+	var guardar = function(){
+		nombres.push(document.getElementById('nb').value);
+		edades.push(parseInt(document.getElementById('edad').value));
+		document.getElementById('nb').value = '';
+		document.getElementById('edad').value = '';
+	}
+
+	var mostrar = function(){
+		var menor = edades[0];
+		var mayor = edades[0];
+		var pos = 0;
+		var pos2 = 0;
+		for(var i= 0; i<edades.length; i++){
+			if(menor > edades[i]){
+				menor = edades[i];
+				pos = i;
+			}else if(mayor < edades[i]){
+				mayor = edades[i];
+				pos2 = i;
+			}
+		}
+		alert('el nombre del menor es: ' + nombres[pos] + ' con edad: ' + menor + 'el nombre del mayor es: ' + nombres[pos2] + ' con edad: ' + mayor);
+
+	}
+
+</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>Nombre:</td>
+				<td><input type="text" id="nb"/></td>
+			</tr>
+			<tr>
+				<td>escribe en numeros tu edad:</td>
+				<td><input type="text" id="edad"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="guard" value="Guardar" /></td>
+				<td><input type="button" id="most" value="Mostrar"/></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

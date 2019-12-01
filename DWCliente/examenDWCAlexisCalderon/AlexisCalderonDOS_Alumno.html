@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Ejercicio 2</title>
+		<script>
+			
+			var nombres = [];
+			var provincias = [];
+			var edades = [];
+			var cont = 0;
+
+			window.onload = function () {
+				document.getElementById('guardar').onclick = guardarDatos;
+				document.getElementById('buscar').onclick = buscarDatos;
+			}
+
+			var guardarDatos = function () {
+				var nombre = document.getElementById('nombre').value;
+				var provincia = document.getElementById('provincia').value;
+				var edad = document.getElementById('edad').value;
+				var existe = false;
+
+				//comprobamos si esta vacio los campos que introduce y mostramos alert
+				if (nombre == "" || provincia == "" || edad == "") {
+					alert('Se debe introducir algun valor');
+				} else {
+					//si es el primer caso lo aniadimos directo al array sino comprobamos si existe
+					if (cont == 0) {
+						nombres.push(nombre);
+						provincias.push(provincia);
+						edades.push(edad);
+						cont++;
+					} else {
+						//comprobamos si existe el usuario en nuestrp array nombres
+						for(var i=0;i<nombres.length;i++) {
+							if (nombres[i] == nombre) {
+								existe = true;
+								break;
+							}
+						}
+						if(existe){
+							alert('Ese usuario ya existe!!!' + nombre);
+							//si no existe lo agregamos
+						}else{
+							nombres.push(nombre);
+							provincias.push(provincia);
+							edades.push(edad);
+							cont++;
+						}
+					}
+				}
+
+				limpiar();
+
+				console.log('valor de nombres->' + nombres);
+				console.log('valor de cont->' + cont);
+			}
+
+			var buscarDatos = function () {
+				nombre = document.getElementById('nombre').value;
+				var existe = false;
+				var pos;
+
+				if(nombres.length == 0) {
+					alert('No hay nombres guardados!!!');
+				}
+				if(nombre == '') {
+					alert('Debes escribir algun nombre!!!');
+				}else{
+					for(var i=0;i<nombres.length;i++){
+						if(nombre==nombres[i]){
+							existe=true;
+							pos=i;
+							break;
+						}
+					}
+					if(existe){
+						document.getElementById('provincia').value=provincias[pos];
+						document.getElementById('edad').value=edades[pos];
+					}
+					else{
+						alert('Ese nombre no se encuentra en la lista');
+					}
+				}
+			}
+
+			var limpiar = function () {
+				document.getElementById('nombre').value = '';
+				document.getElementById('provincia').value = '';
+				document.getElementById('edad').value = '';
+			}
+			
+		</script>
+	</head>
+	<body>
+		<table>
+			<form>
+				
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" id="nombre"  /></td>
+				</tr>
+				<tr>
+					<td>Provincia:</td>
+					<td><input type="text" id="provincia" /></td>
+				</tr>
+				<tr>
+					<td>Edad:</td>
+					<td><input type="text" id="edad"/></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="guardar" value="Guardar"  /></td>
+					<td><input type="button" id="buscar" value="Buscar"  /></td>
+				</tr>
+			</form>
+		</table>
+	</body>
+</html>

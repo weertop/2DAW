@@ -1,0 +1,16 @@
+package Clases;
+/**
+ * Esta clase es una enumeracion de los tipos de peliculas para la clase Pelicula 
+ * @author Alberto Camara, Alexis Calderon
+ *
+ */
+
+public enum genero {
+	TERROR,
+	FANTASIA,
+	DRAMA,
+	COMEDIA,
+	MUSICAL,
+	SUPENSE,
+	TRHILLER,
+}

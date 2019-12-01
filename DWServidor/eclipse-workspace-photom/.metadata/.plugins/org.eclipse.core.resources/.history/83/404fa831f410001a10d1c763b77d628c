@@ -1,0 +1,6 @@
+package factory2;
+
+public class Factura {
+	private int id;
+	private double importe;
+}

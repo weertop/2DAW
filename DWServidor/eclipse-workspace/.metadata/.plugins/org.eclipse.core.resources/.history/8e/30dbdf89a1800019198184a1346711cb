@@ -1,0 +1,89 @@
+package clases;
+/**
+ * Esta clase contiene informacion sobre las peliculas 
+ * @author Alberto Camara, Alexis Calderon
+ *
+ */
+
+public class Pelicula {
+	
+	/**
+	 * Atributos primitivos
+	 */
+	private String titulo;
+	private String director;
+	private int anno;
+	private String sinopsis;
+	private genero genero;
+	
+	/**
+	 * Constructor
+	 * @param titulo
+	 * @param director
+	 * @param anno
+	 * @param sinopsis
+	 * @param genero
+	 */
+	public Pelicula(String titulo, String director, int anno, String sinopsis, genero genero){
+		this.setTitulo(titulo);
+		this.setDirector(director);
+		this.setAnno(anno);
+		this.setSinopsis(sinopsis);
+		this.setGenero(genero);
+	}
+	
+	/**
+	 * Esta clase contara con los metodos basicos de getters y setters
+	 * para sus atributos
+	 * @return atributos
+	 */
+	public genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(genero genero) {
+		this.genero = genero;
+	}
+
+	public String getSinopsis() {
+		return sinopsis;
+	}
+
+	public void setSinopsis(String sinopsis) {
+		this.sinopsis = sinopsis;
+	}
+
+	public int getAnno() {
+		return anno;
+	}
+
+	public void setAnno(int anno) {
+		this.anno = anno;
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	
+	/**
+	 * metodo toString encargado de mostrar la informacion de la pelicula
+	 * por pantalla
+	 */
+	public String toString() {
+		return "\nTitulo: " + titulo + " \n" + "Año: " + anno +
+				"\n" + "Director: " + director + "\n" + "Sinopsis: " + sinopsis +
+				"\n Genero: " + genero;
+	}
+}

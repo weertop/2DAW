@@ -1,0 +1,22 @@
+package command;
+
+public class ApagarServer implements Command{
+
+	private IServer servidor;
+	
+	public ApagarServer(IServer servidor) {
+		this.servidor = servidor;
+	}
+
+	@Override
+	public String execute() {
+		String secuencia = "<h1> iniciando secuencia de apagado ...</h1>";
+		secuencia+=servidor.conectate();
+		secuencia+=servidor.guardarLogs();
+		secuencia+=servidor.desconectate();
+		secuencia+=servidor.apgate();
+		
+		return secuencia;
+	}
+
+}

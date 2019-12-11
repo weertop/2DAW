@@ -12,12 +12,12 @@ ejeMasEjer<%@ page language="java" contentType="text/html; charset=UTF-8"
 		Persona p1 = new Persona("983748X","Pepe");
 		out.println("persona ->"+ "<h2>" + p1.toString() + "</h2>");
 	
-		out.println("<table>" + "<tr>" + "<th>" + p1.getNombre() +  "</th>" + "<th>" + p1.getDni() +  "</th>" + "</tr>" + "</table>");	
+		out.println("<table>" + "<td>" + "<th>" + p1.getNombre() +  "</th>" + "<th>" + p1.getDni() +  "</th>" + "</td>" + "</table>");	
 		
 		p1.setNombre("Juancho");
 		p1.setDni("34234324U");
 		
-		out.println("<table>" + "<tr>" + "<th>" + p1.getNombre() +  "</th>" + "<th>" + p1.getDni() +  "</th>" + "</tr>" + "</table>");
+		out.println("<table>" + "<td>" + "<th>" + p1.getNombre() +  "</th>" + "<th>" + p1.getDni() +  "</th>" + "</td>" + "</table>");
 		
 	%>
 	
@@ -28,14 +28,14 @@ ejeMasEjer<%@ page language="java" contentType="text/html; charset=UTF-8"
 	%>
 	
 	<table border="2">
-		<tr>
+		<td>
 			<td>dni</td>
 			<td>nombre</td>
-		</tr>
-		<tr>
+		</td>
+		<td>
 			<td><%=p.getDni() %></td>
 			<td><%=p.getNombre() %></td>
-		</tr>
+		</td>
 	
 	
 	<% 
@@ -43,10 +43,10 @@ ejeMasEjer<%@ page language="java" contentType="text/html; charset=UTF-8"
 		p.setNombre("Pepa");
 	%>
 	
-		<tr>
+		<td>
 			<td><%=p.getDni() %></td>
 			<td><%=p.getNombre() %></td>
-		</tr>
+		</td>
 	
 	</table>
 	

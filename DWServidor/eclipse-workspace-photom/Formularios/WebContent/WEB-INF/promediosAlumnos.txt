@@ -1,3 +1,5 @@
 pepe,perez,3.0
 hola,mundo,3.2
 pepe,jsdkl,4.3
+yomismo,lol,24.3
+dsadasd,asdasd,2.8

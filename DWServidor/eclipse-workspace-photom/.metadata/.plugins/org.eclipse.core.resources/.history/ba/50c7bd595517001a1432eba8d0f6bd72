@@ -1,0 +1,12 @@
+package command;
+
+public class EncenderLuces implements Command{
+
+	@Override
+	public String execute() {
+		String secuencias = "<h1> iniciando encendido... </h1>";
+		secuencua += luces.enciendete();
+		return null;
+	}
+
+}

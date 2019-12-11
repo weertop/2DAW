@@ -1,0 +1,22 @@
+package command;
+
+public class ArrancarServer implements Command{
+
+	private IServer servidor;
+	
+	public ArrancarServer(IServer servidor) {
+		this.servidor = servidor;
+	}
+
+	@Override
+	public String execute() {
+		String secuencia = "<h1> iniciando secuencia de encendido ...</h1>";
+		secuencia+=servidor.arrancate();
+		secuencia+=servidor.conectate()();
+		secuencia+=servidor.desconectate();
+		secuencia+=servidor.apgate();
+		
+		return secuencia;
+	}
+
+}

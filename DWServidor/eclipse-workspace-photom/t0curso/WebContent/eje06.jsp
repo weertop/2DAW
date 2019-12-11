@@ -14,18 +14,18 @@
 	%>
 	
 	<table border="2">
-		<tr>
+		<td>
 			<td>Nombre Departamento</td>
 			<td>Dni Jefe</td>
 			<td>Nombre</td>
 			<td>Dni persona</td>
-		</tr>
-		<tr>
+		</td>
+		<td>
 			<td><%= d1.getNombreDep() %></td>
 			<td><%= d1.getJefe().getDni()%></td>
 			<td><%= p1.getNombre() %></td>
 			<td><%= p1.getDni() %></td>
-		</tr>
+		</td>
 	</table>
 	
 	<p> El departamento <%= d1.getNombreDep() %> es dirigido por : 

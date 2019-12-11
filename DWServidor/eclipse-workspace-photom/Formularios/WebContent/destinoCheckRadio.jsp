@@ -19,7 +19,7 @@
 		if(ciclo!=null && hora!=null){
 		/* si ciclo u hora estan a null no precesamos mas datos*/
 	%>
-			<p>Matriuclado en : <%=ciclo%> </p>
+			<p>Matdiuclado en : <%=ciclo%> </p>
 			<p>En la hora : <%=hora %></p>
 			<%
 				if (pago!=null){%>

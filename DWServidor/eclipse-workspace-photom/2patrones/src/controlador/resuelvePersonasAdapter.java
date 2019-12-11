@@ -39,32 +39,37 @@ public class resuelvePersonasAdapter extends HttpServlet {
 		
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
-				
-		out.println("<DOCTYPE html>");
-		out.println("<head>");
-		out.println("<title> lectorEscritor </title>");
-		out.println("</head>");
-		out.println("<body>");
-			if(!nombre.isEmpty() && !ape.isEmpty()) {
+		
+
+		try {
+			out.println("<DOCTYPE html>");
+			out.println("<head>");
+			out.println("<title> lectorEscritor </title>");
+			out.println("</head>");
+			out.println("<body>");
+			if (!nombre.isEmpty() && !ape.isEmpty()) {
 				PersonaVieja vj = new PersonaVieja();
 				vj.setNombre(nombre);
 				vj.setApellidos(ape);
 				vj.setFechaNacimiento(fecha);
-				out.println("<p>Formato viejo: "+ vj.getFechaNacimiento() + "</p>");
-				
+				out.println("<p>Formato viejo: " + vj.getFechaNacimiento() + "</p>");
+
 				ViejaANuevaAdapter n = new ViejaANuevaAdapter(vj);
-				
-				out.println("<p>Formato nuevo: "+ n.getNombre() + " " + n.getEdad() +"</p>");
-				
-			}
-			else {
+
+				out.println("<p>Formato nuevo: " + n.getNombre() + " " + n.getEdad() + "</p>");
+
+			} else {
 				out.println("<p>Estan vacios</p>");
 			}
-			
-		out.println("<p><a href = \"index.html\">Vuelta al indice<a/></p>");
-		out.println("</body>");
-		out.println("</html>");
-		
+
+			out.println("<p><a href = \"index.html\">Vuelta al indice<a/></p>");
+			out.println("</body>");
+			out.println("</html>");
+
+		} finally {
+
+			out.close();
+		}
 	}
 
 }

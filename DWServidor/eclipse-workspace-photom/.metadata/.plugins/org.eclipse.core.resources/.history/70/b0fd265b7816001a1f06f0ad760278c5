@@ -1,0 +1,6 @@
+package command;
+
+//tener en cuenta que lo que va a devolver es HTML
+public interface IServer {
+	public String apgate();
+}

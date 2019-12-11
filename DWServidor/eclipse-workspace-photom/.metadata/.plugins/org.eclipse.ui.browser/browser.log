@@ -170,3 +170,165 @@ oct. 20, 2019 15:13:21.80 [16820:2408:1020/151321.807:ERROR:data_pack.cc(117)] C
 
 oct. 21, 2019 11:24:17.39 NEW SESSION
 oct. 21, 2019 11:24:17.39 [14688:4116:1021/112417.393:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 22, 2019 08:21:21.26 NEW SESSION
+oct. 22, 2019 08:21:21.27 [8708:10488:1022/082121.265:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 08:23:03.84 [20128:3688:1022/082303.838:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 08:23:23.16 [17288:18420:1022/082323.167:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 08:25:02.12 [13264:22924:1022/082502.121:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 08:33:06.20 [4908:22828:1022/083306.204:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 08:35:26.73 [18900:3192:1022/083526.728:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 09:28:24.78 [15532:14852:1022/092824.784:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 09:34:49.49 [13552:13692:1022/093449.489:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 09:40:12.19 [10632:5272:1022/094012.189:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:06:26.48 [2776:6448:1022/100626.482:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:07:17.98 [22708:11484:1022/100717.983:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:07:30.07 [3312:15520:1022/100730.072:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:17:01.78 [19768:22016:1022/101701.784:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:18:23.75 [14420:21980:1022/101823.752:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:18:34.13 [14420:11212:1022/101834.138:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+oct. 22, 2019 10:37:35.48 [19036:5852:1022/103735.487:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 10:43:42.15 [5140:12712:1022/104342.155:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 11:28:52.45 [812:22316:1022/112852.456:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 11:29:07.14 [4844:10760:1022/112907.148:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 11:29:36.12 [5792:23336:1022/112936.119:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 22, 2019 11:30:05.62 [4900:11776:1022/113005.628:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 23, 2019 09:55:47.25 NEW SESSION
+oct. 23, 2019 09:55:47.25 [9584:19128:1023/095547.248:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 09:56:18.77 [16572:6324:1023/095618.730:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 09:56:56.29 [5616:5408:1023/095656.289:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 09:57:53.21 [20312:22232:1023/095753.210:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 09:58:26.50 [17940:11080:1023/095826.500:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 09:59:08.46 [884:19180:1023/095908.461:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 09:59:59.30 [11748:23588:1023/095959.301:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:00:57.23 [18408:2036:1023/100057.237:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:01:21.85 [21740:9700:1023/100121.853:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:05:12.30 [1788:7856:1023/100512.308:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 23, 2019 10:20:17.20 NEW SESSION
+oct. 23, 2019 10:20:17.20 [13504:7752:1023/102017.205:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:24:15.14 [21804:1872:1023/102415.139:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:32:07.02 [23332:9984:1023/103207.019:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:32:54.71 [17208:13068:1023/103254.709:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:34:21.01 [17124:8136:1023/103421.014:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:39:19.85 [13820:9228:1023/103919.859:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:45:12.12 [9792:10168:1023/104512.123:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 10:46:22.37 [3936:19400:1023/104622.371:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:26:28.07 [22820:3212:1023/112628.070:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:30:13.67 [19284:14512:1023/113013.672:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:34:43.14 [13672:7504:1023/113443.141:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:35:39.04 [9420:3688:1023/113539.048:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:36:50.83 [1076:13660:1023/113650.834:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:38:37.27 [6076:20904:1023/113837.273:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:41:32.94 [10800:10724:1023/114132.946:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:47:31.03 [1192:17436:1023/114731.031:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:48:24.54 [24176:4384:1023/114824.539:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 11:58:54.00 [14036:24164:1023/115854.002:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 23, 2019 13:12:04.80 [7032:11708:1023/131204.808:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 28, 2019 21:39:54.55 NEW SESSION
+oct. 28, 2019 21:39:54.55 [9868:22900:1028/213954.549:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 21:42:19.74 [16676:19560:1028/214219.747:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 21:49:32.82 [18944:23176:1028/214932.827:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 21:55:13.66 [11696:20764:1028/215513.659:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 21:56:22.94 [21660:22244:1028/215622.940:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 21:59:33.84 [25956:17908:1028/215933.842:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:01:16.17 [24740:28452:1028/220116.169:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:06:21.67 [6664:20892:1028/220621.677:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:10:21.82 [22712:28588:1028/221021.826:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:11:46.69 [3372:17704:1028/221146.693:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:12:08.78 [21332:17616:1028/221208.784:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:13:47.52 [28364:27368:1028/221347.519:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:15:01.75 [28096:7344:1028/221501.752:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:18:16.21 [26056:19868:1028/221816.217:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:20:46.41 [8152:23924:1028/222046.411:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:32:26.15 [14796:18436:1028/223226.153:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:35:22.95 [852:20192:1028/223522.952:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 28, 2019 22:39:10.82 [6784:28380:1028/223910.823:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+oct. 29, 2019 08:09:00.26 NEW SESSION
+oct. 29, 2019 08:09:00.26 [27272:8404:1029/080900.261:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 08:19:17.92 [15600:28352:1029/081917.925:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 08:34:37.45 [23428:8908:1029/083437.456:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 08:35:40.14 [15188:24200:1029/083540.142:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:25:33.57 [16120:22380:1029/092533.570:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:27:01.63 [28600:24692:1029/092701.632:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:27:11.77 [18000:92:1029/092711.773:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:28:42.14 [2204:2044:1029/092842.144:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:32:30.97 [10276:12080:1029/093230.972:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:34:11.58 [18752:10816:1029/093411.583:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:35:23.03 [28636:18772:1029/093523.035:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:36:39.96 [12244:23860:1029/093639.966:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 09:38:42.08 [9948:19960:1029/093842.081:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 10:20:03.20 [13172:14192:1029/102003.207:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 10:27:15.05 [25592:11392:1029/102715.057:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 10:30:25.03 [26268:26424:1029/103025.029:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 10:30:50.96 [23864:27348:1029/103050.968:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 11:22:31.03 [15248:21272:1029/112231.039:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 29, 2019 11:22:35.31 [15248:17640:1029/112235.313:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 29, 2019 11:23:01.64 [15248:17640:1029/112301.641:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -106
+oct. 29, 2019 11:23:03.89 [15248:1316:1029/112303.891:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 29, 2019 11:23:04.63 [15248:1316:1029/112304.632:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+oct. 29, 2019 11:23:04.94 [15248:1316:1029/112304.945:ERROR:account_tracker.cc(241)] AccessTokenFetched error: Connection failed (-106).
+
+oct. 30, 2019 10:18:22.55 NEW SESSION
+oct. 30, 2019 10:18:22.55 [20940:17704:1030/101822.553:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 30, 2019 10:29:24.97 [11140:17680:1030/102924.973:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 30, 2019 11:32:32.93 [20016:19104:1030/113232.933:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 30, 2019 11:33:36.63 [18252:17756:1030/113336.635:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 30, 2019 11:36:08.20 [10196:17416:1030/113608.206:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+oct. 30, 2019 11:37:27.89 [3956:19804:1030/113727.889:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+nov. 16, 2019 12:04:46.40 NEW SESSION
+nov. 16, 2019 12:04:46.40 [6752:25324:1116/120446.400:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 12:19:15.88 [6348:8108:1116/121915.887:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 12:19:37.06 [26808:1616:1116/121937.060:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 12:19:48.72 [26808:1672:1116/121948.727:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+nov. 16, 2019 12:19:57.03 [10740:26920:1116/121957.031:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 12:39:06.00 [1752:17052:1116/123906.006:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 12:39:14.09 [13320:15824:1116/123914.096:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 12:40:43.96 [20032:628:1116/124043.966:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 13:06:18.89 [4892:14852:1116/130618.897:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 16, 2019 13:07:10.53 [23400:2088:1116/130710.529:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+nov. 19, 2019 05:16:35.80 NEW SESSION
+nov. 19, 2019 05:16:35.80 [15924:7376:1119/051635.806:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:17:07.23 [13692:18900:1119/051707.233:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:31:52.35 [7912:5396:1119/053152.350:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:33:33.84 [16708:17924:1119/053333.844:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:35:33.90 [7024:15080:1119/053533.902:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:39:04.28 [14788:20228:1119/053904.279:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:40:20.42 [10696:7024:1119/054020.427:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 19, 2019 05:41:18.34 [19088:17148:1119/054118.340:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+nov. 26, 2019 09:31:41.51 NEW SESSION
+nov. 26, 2019 09:31:41.51 [4080:22604:1126/093141.512:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+nov. 27, 2019 10:41:51.37 NEW SESSION
+nov. 27, 2019 10:41:51.37 [11892:24152:1127/104151.375:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 27, 2019 10:43:14.05 [26664:21416:1127/104314.057:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+nov. 27, 2019 10:44:12.85 [17244:22192:1127/104412.858:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+dic. 03, 2019 09:07:16.04 NEW SESSION
+dic. 03, 2019 09:07:16.04 [26644:5868:1203/090716.039:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 09:57:44.16 [9580:10380:1203/095744.164:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 09:59:44.21 [4736:24028:1203/095944.215:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:02:16.83 [30672:29264:1203/100216.832:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:05:51.19 [3844:27824:1203/100551.192:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:07:59.20 [21508:12680:1203/100759.204:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:12:46.54 [9208:22320:1203/101246.544:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:16:07.97 [24340:12464:1203/101607.973:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:18:43.80 [9944:22272:1203/101843.805:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 03, 2019 10:22:30.34 [14916:9760:1203/102230.345:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+
+dic. 04, 2019 11:46:50.48 NEW SESSION
+dic. 04, 2019 11:46:50.48 [12616:21628:1204/114650.485:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 11:47:12.08 [30648:24760:1204/114712.079:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 12:45:40.46 [24144:30636:1204/124540.459:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 12:46:38.49 [88:13832:1204/124638.496:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 12:47:38.52 [15004:25724:1204/124738.524:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 12:48:05.97 [22460:14020:1204/124805.970:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 12:48:10.01 [22460:30268:1204/124810.016:ERROR:get_updates_processor.cc(246)] PostClientToServerMessage() failed during GetUpdates
+dic. 04, 2019 12:49:43.22 [30572:15772:1204/124943.227:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
+dic. 04, 2019 12:50:05.91 [28964:18752:1204/125005.914:ERROR:data_pack.cc(117)] Could not open pak file for writing: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)

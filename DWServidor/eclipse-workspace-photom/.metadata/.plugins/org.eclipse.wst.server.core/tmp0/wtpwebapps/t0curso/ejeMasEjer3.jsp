@@ -21,12 +21,12 @@
 	}else if(hora==8){
 		out.println("<h2> son las " + hora + " empieza mi jornada </h2>");
 	}else{
-		out.println("<h2> son las " + hora + " y seguimos trabajando </h2>");
+		out.println("<h2> son las " + hora + " y seguimos tdabajando </h2>");
 	}
 
 
 	/* if (hora > 8 && hora < 15){
-		out.print("hola son las "+hora +" y seguimos trabajando ");
+		out.print("hola son las "+hora +" y seguimos tdabajando ");
 	} else 	if (hora == 8){
 		out.print(" hola son las 8 de la mañana empieza mi jornada ");
 	}else {

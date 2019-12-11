@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%
-		String[] hoteles = {"Ritz","Eurostar"};
+		String[] hoteles = {"Ritz","Eurostar","Hilton"};
 	%>
 
 	<h1>Reserva De Hotel</h1>
@@ -20,17 +20,15 @@
 			<input type="radio" name="hotel" value="<%=hoteles[i]%>" checked/><%=hoteles[i]%><br/>
 		<%} %>
 		
-		
-		<p>Nombre: <input type="text" name="nombre"/></p>
-		<p>DNI: <input type="text" name="dni"/></p>
-		<p>Numero de dias: <input type="number" name="dias"/></p>
+		<p>Nombre: <input type="text" name="nombre" required/></p>
+		<p>DNI: <input type="text" name="dni" required/></p>
+		<p>Numero de dias: <input type="number" name="dias" required/></p>
 		
 		<p>Regimen: </p>
-		<input type="radio" name="tipo" value="alojamiento"/>alojamiento<br/>
-		<input type="radio" name="tipo" value="aloydesayuno"/>alojamiento mas desayuno<br/>
-		<input type="" name="tipo" value="aloydesayuno"/>alojamiento mas desayuno<br/>
+		<input type="radio" name="tipo" value="alojamiento"/>Alojamiento<br/>
+		<input type="radio" name="tipo" value="aloydesayuno"/>Alojamiento mas desayuno<br/>
 		
-		<p>Extras: </p>
+		<p>Extdas: </p>
 		<input type="checkbox" name="parking" value="parking"/>parking<br/>
 		<input type="checkbox" name="gym" value="gym"/>gym<br/>
 		<input type="checkbox" name="caja" value="caja"/>caja fuerte<br/>

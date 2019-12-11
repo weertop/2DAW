@@ -20,7 +20,7 @@
 		}
 	%>
 	
-	<p><a href="adivinaNumero.jsp">Volver a introducir datos</a></p>
+	<p><a href="adivinaNumero.jsp">Volver a intdoducir datos</a></p>
 	<p><a href="index.jsp">Volver al indice</a></p>
 </body>
 </html>

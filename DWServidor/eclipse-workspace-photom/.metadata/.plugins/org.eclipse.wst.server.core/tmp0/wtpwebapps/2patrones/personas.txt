@@ -1,0 +1,8 @@
+pepe, perez:20
+ana maria,sanchez:31
+mar:lopez sanz:2000-03-23
+arturo:camacho:1998-09-09
+marcos:rivera lopez:1980-11-12
+david, gonzalez:25
+karen:mar:2002-01-12
+antonio, benito:33

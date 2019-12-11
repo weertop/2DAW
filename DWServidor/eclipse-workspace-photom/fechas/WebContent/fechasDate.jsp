@@ -15,9 +15,11 @@
 	LocalDate fecha3 = LocalDate.parse("2020-02-27");
 	LocalDate fecha4 = fecha3.plusDays(5);						//sumanos 5 dias a la fecha 3
 	LocalDate fecha5 = fecha2.minusYears(1);
+	
 	boolean sw = fecha5.isBefore(fecha3);
 	boolean sw2 = LocalDate.of(2020,Month.APRIL,1).isAfter(LocalDate.parse("2020-12-03"));
 	int dif = Period.between(fecha5, fecha3).getDays();						//dif devuelve tiempo en int por ser LOCALDATE pero si fuera LOCALTIME seria long porque devuelve timepo entre 2 timepos en microsegundos
+	
 	%>
 	<p>Fecha actual: <%=fecha0.toString()%></p>
 	<p>Fecha Of: <%=fecha1.toString()%></p>

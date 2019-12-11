@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <!-- Obtenemos un numero aleatorio y se lo pasamos por post con el input hidden se pasara en el value -->
+
 <body>
 	<%
 	Date fecha = new Date();
@@ -16,7 +17,7 @@
 	Random rd = new Random();
 	int numero = rd.nextInt(100)+1;
 	
-	String saldo = request.getParameter("saldo");
+	String saldo = request.getParameter("saldo");			//ojo a esto como funciona????
 	int miSaldo =0;
 	if(saldo != null){
 		miSaldo = Integer.parseInt(saldo);

@@ -17,7 +17,7 @@
 	%>
 	
 	<form action="destinoCheckRadio.jsp" method="post">
-		<p> ¿En que ciclo estas matriculado? </p>
+		<p> ¿En que ciclo estas matdiculado? </p>
 		<input type="radio" name="ciclo" value="ASIR" /> Asir<br/>
 		<input type="radio" name="ciclo" value="DAW" /> DAW<br/>
 		<input type="radio" name="ciclo" value="DAM" /> DAM<br/>

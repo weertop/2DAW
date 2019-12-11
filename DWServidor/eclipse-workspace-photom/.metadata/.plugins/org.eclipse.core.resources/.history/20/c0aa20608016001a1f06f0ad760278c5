@@ -1,0 +1,17 @@
+package command;
+
+public class ApagarServer implements Command{
+
+	private IServer servidor;
+	
+	public ApagarServer(IServer servidor) {
+		this.servidor = servidor;
+	}
+
+	@Override
+	public String execute() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

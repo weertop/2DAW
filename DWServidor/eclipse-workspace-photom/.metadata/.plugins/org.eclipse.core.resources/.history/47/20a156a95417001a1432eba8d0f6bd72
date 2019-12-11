@@ -1,0 +1,9 @@
+package command;
+
+public interface IServer {
+	public String[] apagate();
+	
+	public String[] enciendete();
+	
+	public String[] regula();
+}

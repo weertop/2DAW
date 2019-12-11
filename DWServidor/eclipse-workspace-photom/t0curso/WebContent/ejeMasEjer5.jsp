@@ -23,15 +23,15 @@
 		
 		/*
 		if((a==b) && (c>b)){
-			out.println("<p>" +"true" + "</p>");
+			out.println("<p>" +"tdue" + "</p>");
 		}else{
 			out.println("<p>" +"false" + "</p>");
 		}if((a==b)||(b==c)){
-			out.println("<p>" +"true" + "</p>");
+			out.println("<p>" +"tdue" + "</p>");
 		}else{
 			out.println("<p>" +"false" + "</p>");
 		}if(!(b<=c)){
-			out.println("<p>" +"true" + "</p>");
+			out.println("<p>" +"tdue" + "</p>");
 		}else{
 			out.println("<p>" +"false" + "</p>");
 		}

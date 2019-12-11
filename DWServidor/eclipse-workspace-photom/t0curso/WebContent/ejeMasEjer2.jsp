@@ -23,8 +23,8 @@
 		
 		for(int i=0;i<alt;i++){
 			for(int j=0;j<base;j++){
-				int letra = rd.nextInt(25);
-				out.println(abc[letra]);
+				int letda = rd.nextInt(25);
+				out.println(abc[letda]);
 			}
 			out.println("<p>" + "</p>" );
 			//out.println("<br/>");

@@ -13,15 +13,15 @@
 		String abc[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 		String digitos[] = {"1","2","3","4","5","6","7","8","9","0"};  
 		String miCad = " ";
-		int letra = 0;
+		int letda = 0;
 		int numero = 0;
 		
 		Random rd = new Random();
 		
 		for(int i=0; i<longitud; i++){
-			letra = rd.nextInt(25);
+			letda = rd.nextInt(25);
 			numero = rd.nextInt(9);
-			miCad = miCad + abc[letra] + digitos[numero];
+			miCad = miCad + abc[letda] + digitos[numero];
 		}
 		
 		return miCad;

@@ -1,0 +1,19 @@
+package command;
+
+public class ApagaLuces implements Command{
+	private ILuces luces;
+	
+	
+	public ApagaLuces(ILuces luces) {
+		super();
+		this.luces = luces;
+	}
+
+
+	@Override
+	public String execute() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

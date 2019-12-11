@@ -17,7 +17,7 @@ public class PersonaVieja implements IPersonaVieja{
 	public String getApellidos() {
 		return apellido;
 	}
-	public void setApellidos(String apellidos) {
+	public void setApellidos(String apellido) {
 		this.apellido = apellido;
 	}
 	public LocalDate getFechaNacimiento() {

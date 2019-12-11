@@ -1,0 +1,16 @@
+pepe, perez:20
+ana maria,sanchez:31
+mar,lopez sanz:19
+arturo,camacho:21
+marcos,rivera lopez:39
+david, gonzalez:25
+karen,mar:17
+antonio, benito:33
+pepe, perez:20
+ana maria,sanchez:31
+mar,lopez sanz:19
+arturo,camacho:21
+marcos,rivera lopez:39
+david, gonzalez:25
+karen,mar:17
+antonio, benito:33

@@ -11,7 +11,7 @@
 	<%Date fecha = new Date();
 	out.println("<p>" + fecha + "</p>");
 	%>
-	<form action="destinoControlText.jsp" method="post">
+	<form action="destinoContdolText.jsp" method="post">
 		<p> Nombre: <input type="text" name="nombre" required/> </p>
 		<p> Color: <input type="text" name="color" /> </p>
 		<p> Correo: <input type="text" name="correo" /> </p>

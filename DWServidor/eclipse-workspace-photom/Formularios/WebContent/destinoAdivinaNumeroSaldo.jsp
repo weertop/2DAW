@@ -31,7 +31,7 @@
 			}
 		}
 	%>
-	<p>me queda <%=saldo %></p>
+	<p>me queda <%=saldo%></p>
 	<form action="adivinaConSaldo.jsp" method="post">
 
 		<p><input type="hidden" name="saldo" value="<%=saldo%>"/></p>

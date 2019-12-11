@@ -10,51 +10,70 @@
 <body>
 <%
 	String forma[] = {"cuadrado","circulo","elipse"};
-	String color[] = {"red","blue","purple","yellow","pink","black"};
-	int posicionX = 0;
+	String color[] = {"red","blue","purple","yellow","pink"};
+	//lista para guardar el producto cartesiano entre forma y color
+	ArrayList<String[]> lista = new ArrayList<String[]>();
+
 	Random rd = new Random();
-	int aleBuscadoColor, aleBuscadoForma;
+	
+	int aleBuscadoColor, aleBuscadoForma, ale;
+	aleBuscadoColor = rd.nextInt(color.length);				
+	aleBuscadoForma = rd.nextInt(forma.length);
+	
 %>
 
 <form action="destinoSeleccionaFormaColor.jsp" method="post">
 		<%
-		for(int i=0; i<15 ; i++){
-			int aleForma = rd.nextInt(forma.length);
-			int aleColor = rd.nextInt(color.length);
-			
-			switch(aleForma){
-				case 0: %>			
-						<button type="submit" name="usuEscoge" value="<%=forma[0]+ ':' + color[aleColor]%>">
-						<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
-						<rect x="30px" y="30px" width="200px" height="200px" stroke="black" stroke-width=2 fill="<%=color[aleColor]%>"/>
-						</svg>
-						</button>
-						<%
-						break;
-						
-				case 1: %>			
-						<button type="submit" name="usuEscoge" value="<%=forma[1]+ ':' + color[aleColor]%>">
-						<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
-						<circle cx="130px" cy="130px" r="90" stroke="black" stroke-width=”1px” fill="<%=color[aleColor]%>">
-						</svg>
-						</button>
-						<%
-						break;
-						
-				case 2: %>			
-						<button type="submit" name="usuEscoge" value="<%=forma[2]+ ':' + color[aleColor]%>">
-						<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
-						<ellipse cx="130px" cy="130px" rx="90" ry="50" stroke-width=”1px” fill="<%=color[aleColor]%>"/>
-						</svg>
-						</button>
-						<%
-						break;
+		//esto hace el producto cartesiano entre las listas forma y color, lo guarda en lista
+		for(String v1 : forma){
+			for(String v2 : color){
+				lista.add(new String[]{v1,v2});
 			}
-
+		}
+		 
+		//esto mezcla los elementos del producto cartesiano entre forma y color
+		for (int i=0; i<lista.size(); i++) {
+		    int randomPosicion = rd.nextInt(lista.size());
+		    String temp1 = lista.get(i)[0];
+		    String temp2 = lista.get(i)[1];
+		    lista.get(i)[0] = lista.get(randomPosicion)[0];
+		    lista.get(i)[1] = lista.get(randomPosicion)[1];
+		    lista.get(randomPosicion)[0] = temp1;
+		    lista.get(randomPosicion)[1] = temp2;
 		}
 		
-		aleBuscadoColor = rd.nextInt(color.length);				//para seleccionar un color de los que se muestran
-		aleBuscadoForma = rd.nextInt(forma.length);
+		//esto muestra en pantalla la forma y color de la lista
+		for(int i=0;i<lista.size();i++){
+			String dato = lista.get(i)[0]+":"+lista.get(i)[1];
+			String formas = lista.get(i)[0];
+			if(formas.equals("cuadrado")){
+			%>			
+						<button type="submit" name="usuEscoge" value="<%=dato%>">
+						<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
+						<rect x="30px" y="30px" width="200px" height="200px" stroke="black" stroke-width=2 fill="<%=lista.get(i)[1]%>"/>
+						</svg>
+						</button>
+						<%
+						
+		}else if(formas.equals("circulo")){ %>			
+						<button type="submit" name="usuEscoge" value="<%=dato%>">
+						<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
+						<circle cx="130px" cy="130px" r="90" stroke="black" stroke-width=”1px” fill="<%=lista.get(i)[1]%>">
+						</svg>
+						</button>
+						<%
+		
+						
+		}else if(formas.equals("elipse")){ %>			
+						<button type="submit" name="usuEscoge" value="<%=dato%>">
+						<svg xmlns="http://www.w3.org/2000/svg"  height="250px" width="250px">
+						<ellipse cx="130px" cy="130px" rx="90" ry="50" stroke-width=”1px” fill="<%=lista.get(i)[1]%>"/>
+						</svg>
+						</button>
+						<%
+			}
+		}
+		
 		%>
 		<h2>Selecciona el de la forma: <%=forma[aleBuscadoForma]%> y con color: <%=color[aleBuscadoColor]%></h2>
 			<input type="hidden" name="debiaBuscarForma" value="<%=forma[aleBuscadoForma]%>"/>

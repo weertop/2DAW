@@ -1,0 +1,18 @@
+package command;
+
+public class EncenderLuces implements Command{
+
+	private ILuces luces;
+	
+	public EncenderLuces() {
+		this.luc
+	}
+	
+	@Override
+	public String execute() {
+		String secuencias = "<h1> iniciando encendido... </h1>";
+		secuencua += luces.enciendete();
+		return secuencua;
+	}
+
+}

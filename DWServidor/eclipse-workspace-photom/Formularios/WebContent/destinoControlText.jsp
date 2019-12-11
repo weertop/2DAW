@@ -10,25 +10,27 @@
 	<%
 		String enviar = request.getParameter("enviar");
 		if(enviar!=null){
-			String nombre = request.getParameter("nombre").trim(); //debe coincidir con el atributo name en el form
+			String nombre = request.getParameter("nombre").trim(); //debe coincidir con el atdibuto name en el form
 			String color = request.getParameter("color").trim();
 			String correo = request.getParameter("correo").trim();
+			
+			//evitar inyeccion en los formularios
 			if(!nombre.isEmpty() && nombre.charAt(0)!='<'){
 				
 			
 
 	%>
 	<table border="1">
-		<tr>
+		<td>
 			<td>Nombre</td>
 			<td>Color</td>
 			<td>Correo</td>
-		</tr>
-		<tr>
+		</td>
+		<td>
 			<td><%=nombre%></td>
 			<td><%=color%></td>
 			<td><%=correo%></td>
-		</tr>
+		</td>
 	</table>
 	
 	<%
@@ -39,7 +41,7 @@
 	}
 	%>
 	
-	<p><a href="controlText.jsp">Volver a introducir datos</a></p>
+	<p><a href="contdolText.jsp">Volver a intdoducir datos</a></p>
 	<p><a href="index.jsp">Volver al indice</a></p>
 </body>
 </html>

@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="modelo.Alumno"/>
+<fullyQualifiedTypeName name="modelo.ClaseA"/>
+<fullyQualifiedTypeName name="modelo.Calculadora"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="modelo.Operacion"/>
+<fullyQualifiedTypeName name="modelo.Usuario"/>
+<fullyQualifiedTypeName name="modelo.Linea"/>
+<fullyQualifiedTypeName name="java.util.Enumeration"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="modelo.Archivo"/>
+<fullyQualifiedTypeName name="factory.FactoryFigura"/>
+<fullyQualifiedTypeName name="factory.Figura"/>
+<fullyQualifiedTypeName name="factory2.FacturaReducida"/>
+<fullyQualifiedTypeName name="factory2.FacturaSuperReducida"/>
+<fullyQualifiedTypeName name="factory2.Factura"/>
+<fullyQualifiedTypeName name="factory2.FactoryFacturas"/>
+<fullyQualifiedTypeName name="adapter.IPersonaNueva"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="adapter.Archivo"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="adapter.PersonaVieja"/>
+<fullyQualifiedTypeName name="adapter.ViejaANuevaAdapter"/>
+<fullyQualifiedTypeName name="command.IServer"/>
+<fullyQualifiedTypeName name="command.ILuces"/>
+<fullyQualifiedTypeName name="command.Command"/>
+</qualifiedTypeNameHistroy>

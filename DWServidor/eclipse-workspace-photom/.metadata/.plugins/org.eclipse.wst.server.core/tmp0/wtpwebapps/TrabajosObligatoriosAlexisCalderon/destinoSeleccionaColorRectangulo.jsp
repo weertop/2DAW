@@ -19,5 +19,6 @@
 	}
 	%>
 	<a href="seleccionaColoresRectangulo.jsp">Volver</a>
+	<p><a href="indice.html">Volver al indice</a></p>
 </body>
 </html>

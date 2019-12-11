@@ -10,11 +10,13 @@
 <body>
 <%
 	Random rd = new Random();
+	int randomSigno = rd.nextInt(2);
 	int valA = rd.nextInt(10);
-	int valB;
-	do{
-		valB = rd.nextInt(10);
-	}while(valB > valA || valA==0);
+	int valB = rd.nextInt(10);
+	if(randomSigno == 1){
+		valB *= -1;
+	}
+	
 %>
 	<h2>Escriba el resultado de la siguiente division:</h2>
 	<form action="destinoAdivinaMultiplicacion.jsp" method="post">

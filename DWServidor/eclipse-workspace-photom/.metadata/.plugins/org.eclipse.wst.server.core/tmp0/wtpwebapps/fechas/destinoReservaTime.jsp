@@ -22,7 +22,7 @@
 	int difDate = Period.between(fechaEntrada, fechaSalida).getDays();
 	int total = tarifaDia * difDate;
 	
-	long difTime = ((Duration.between(horaEntradaT, horaSalidaT).getSeconds())/3600);
+	long difTime = ((Duration.between(horaEntradaT, horaSalidaT).getSeconds())/3600);				//ojo para devolverlo en horas
 %>
 <p>Tu estancia desde <%=entrada%> hasta <%=salida%> son <%=difDate%> dias : total <%=total%> y el tiempo es : <%=difTime%></p>
 <p><a href="reserva.jsp">Volver</a></p>

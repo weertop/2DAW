@@ -24,7 +24,7 @@
 		
 		if(opA.equals(signo)){
 			out.println("<h3>Signo Correcto</h3>");
-			if(opB == resul){
+			if(opB == Math.abs(resul)){
 				out.println("<h3>Resulatado Correcto</h3>");
 			}else{
 				out.println("<h3>Fallaste en el resultado era: " + resul + "</h3>");
@@ -35,5 +35,6 @@
 	%>
 	<hr/>
 	<p><a href="adivinaMultiplicacion.jsp">Volver a jugar</a></p>
+	<p><a href="indice.html">Volver al indice</a></p>
 </body>
 </html>

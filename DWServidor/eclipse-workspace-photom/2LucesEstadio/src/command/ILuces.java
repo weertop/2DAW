@@ -1,0 +1,9 @@
+package command;
+
+public interface ILuces {
+	public String apagate();
+	
+	public String enciendete();
+	
+	public String regula();
+}

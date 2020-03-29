@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+
+<script>
+
+    var acum = 0;
+	var operador ='';
+	var cambio=false;
+    window.onload = function () {
+		
+        var on = document.getElementById("borrar");
+        on.onclick = borrarC;
+
+        var on = document.getElementById("on");
+        on.onclick = encender;
+
+        var off = document.getElementById("apagar");
+        off.onclick = apagar;
+		
+		var igual = document.getElementById("igual");
+        igual.onclick = resultado;
+
+
+        var cosas = document.getElementsByName("numero");
+        for (var i = 0; i < cosas.length; i++) {
+            cosas[i].onclick = displayer;
+        }
+
+        var operador = document.getElementsByName("op");
+        for (var j = 0; j < operador.length; j++) {
+            operador[j].onclick = operacion;
+        }
+
+    }
+
+	function resultado(){
+
+
+		switch (operador) {
+            case '+':				
+                acum = acum + parseFloat(document.getElementById("resul").value);
+                break;
+		 case '-':
+                acum = acum - parseFloat(document.getElementById("resul").value);
+                break;
+		case '*':
+                acum = acum * parseFloat(document.getElementById("resul").value);
+                break;
+		case '/':
+                acum = acum / parseFloat(document.getElementById("resul").value);
+                break;
+		}
+		
+		document.getElementById("resul").value = acum;
+		acum=0;
+		
+	}
+
+    function operacion() {
+       
+	   
+	   if (acum==0 ){
+			acum=parseFloat(document.getElementById("resul").value);
+			operador=this.value;
+			
+	   }else{
+			switch (operador) {
+            case '+':				
+                acum = acum + parseFloat(document.getElementById("resul").value);
+				document.getElementById("resul").value=acum;
+				operador = this.value;
+				
+                break;
+            case '-':
+                acum = acum - parseFloat(document.getElementById("resul").value);
+				document.getElementById("resul").value=acum;
+				operador = this.value;
+                
+                break;
+            case '*':
+                acum = acum * parseFloat(document.getElementById("resul").value);
+				document.getElementById("resul").value=acum;
+				operador = this.value;
+                
+                break;
+            case '/':
+                acum = acum / parseFloat(document.getElementById("resul").value);
+				document.getElementById("resul").value=acum;
+				operador = this.value;
+                
+                break; 
+                 
+        }
+	   }
+	   cambio=true;
+   }
+
+
+    function borrar() {
+        document.getElementById("resul").value = " ";
+    }
+	
+	function borrarC() {
+        document.getElementById("resul").value = "";
+		acum=0;
+    }
+
+    function displayer() {
+		if (cambio==true){
+		borrar();
+		cambio=false;}
+        document.getElementById("resul").value += this.value;
+    }
+
+
+    function encender() {
+  
+        var cosas = document.getElementsByTagName("input");
+        for (var i = 0; i < cosas.length; i++) {
+            cosas[i].disabled = false;
+        }
+        document.getElementById("on").disabled = true;
+
+    }
+
+    function apagar() {
+
+        var cosas = document.getElementsByTagName("input");
+        for (var i = 0; i < cosas.length; i++) {
+            cosas[i].disabled = true;
+        }
+        document.getElementById("on").disabled = false;
+		borrarC();
+		acum=0;
+    }
+
+
+
+
+
+
+</script>
+
+
+
+<body> 
+<div align="center"> 
+<table border="2">
+    <tr >
+        <td> 
+            <table>
+                <form name="formi" action="" method=""> 
+                <th colspan="4" >
+                    <input type="text" id="resul" value="" style="text-align:right" disabled readonly="readonly" name="ver"/></th> 
+                    <tr><b> 
+                        <td width="34"><b><b> 
+                            <input id="borrar" type="button" name="c" value="C" class="imagenbotom" disabled style="text-align:center"  /> 
+                        </b></b></td> 
+                        </b>
+                        <td width="33">
+                            <input id="div" type="button" name="op" value="/" class="imagenbotom" disabled style="text-align:center"  />
+                        </td>
+                        <td width="33">
+                            <input id="multi" type="button" name="op" value="*" class="imagenbotom" disabled style="text-align:center" />
+                        </td>
+                        <td width="31">
+                            <input id="rest" type="button" name="op" value="-" class="imagenbotom" disabled style="text-align:center" />
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>
+                            <input id="siete" type="button" name="numero" value="7" class="imagenbotom" disabled style="text-align:center" />
+                        </td>
+                        <td>
+                            <input id="ocho" type="button"  name="numero" value="8" class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td>
+                            <input  id="nueve" type="button" name="numero" value="9" onclick="" class="imagenbotom" disabled style="text-align:center"/>
+                        </td> 
+                        <td rowspan="2">
+                            <input id="sumar" type="button" size="20" name="op" value="+" class="imagenespecial" disabled style="text-align:center" />
+                        </td> 
+                        <td rowspan="2">
+                            <input id="on" type="button" size="20" name="on" value="ON" class="imagenespecial" style="text-align:center" />
+                        </td> 
+                    </tr> 
+                    <tr>
+                        <td>
+                            <input id="cuatro" type="button" name="numero" value="4"  class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td>
+                            <input id="cinco" type="button" name="numero" value="5" class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td>
+                            <input id="seis" type="button" name="numero"  value="6" class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <input id="uno" type="button" name="numero" value="1"  class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td>
+                            <input id="dos" type="button" name="numero"  value="2" class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td>
+                            <input id="tres" type="button" name="numero" value="3"  class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td rowspan="2">
+                            <input id="igual" type="button" name="igual" value="=" class="imagenespecial" disabled style="text-align:center" />
+                        </td>
+                        <td>
+                            <input id="apagar" type="button" size="20" name="off" value="OFF" class="imagenespecial" disabled style="text-align:center" />
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2">
+                            <input id="cero" type="button" name="numero" value="0" class="especialimagen" disabled style="text-align:center" />
+                        </td>
+                        <td>
+                            <input id="punto" type="button" name="numero" value="." class="imagenbotom" disabled style="text-align:center" />
+                        </td>
+                    </tr> 
+</form> 
+</table></td></tr></table> 
+</div> 
+</body> 
+</html> 

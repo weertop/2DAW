@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<script> 
+		var marcas;
+		
+		window.onload = function() {
+			marcas=document.getElementById("marcas");
+			marcas.onclick=sacarMarcaElegida;
+			precio=0;
+			modelos=document.getElementById("modelos");
+			modelos.onclick=funcionHacerClickModelos;
+			imagen=document.getElementById("imag");
+			colores=document.getElementsByName("colores");
+			extras=document.getElementsByName("extra");
+			txtPrecio=document.getElementById("precio");
+			modificado=false;
+			modificadoP=false;
+			ultimaMod=0;
+			ultimaModE=0;
+		
+			for(var a=0;a<colores.length;a++){
+			
+			colores[a].onclick=function(){funcionHacerClickModelos();precioColor();};
+				
+			}		
+		
+			for (var a=0;a<extras.length;a++){
+			extras[a].onclick=precioExtra;
+			}
+	}
+		function cambiarColor(){
+		for(a=0;a<colores.length;a++){
+				if(colores[a].checked){
+					color=colores[a].value;
+					}
+				}
+		}
+		function precioColor(){
+		
+		if(modificado==false){
+			for( var a=0;a<colores.length;a++){
+				if(colores[a].checked){
+					switch(colores[a].value){
+					
+						case "R":
+							precio+=500;
+							ultimaMod=500;
+							break;
+						case "N":
+							precio+=700;
+							ultimaMod=700;
+							break;
+						case "B":
+							ultimaMod=0;
+							break;
+					}
+							txtPrecio.value=precio;	
+								modificado=true;
+								
+				}
+			}
+		}
+		else  {
+			precio-=ultimaMod;									
+			modificado=false;
+			precioColor();		
+		
+			}
+		}
+	
+		
+		function precioExtra(){
+			if(modificadoP==false){
+				if(extras[0].checked){
+				precio+=1000;
+				ultimaModE=1000;
+				 txtPrecio.value=precio;
+			modificadoP=true;	
+				}
+				else if(extras[1].checked){
+				
+					if(ultimaModE!=0){
+					precio-=1000;
+					ultimaMod=0;
+					modificadoP=true;
+					 txtPrecio.value=precio;
+					}
+				}
+			}		
+			else {
+		
+			if(extras[0].checked){
+				precio-=ultimaModE;
+				 txtPrecio.value=precio;
+				 
+				}
+				else if(extras[1].checked){
+				
+					if(ultimaModE!=0){
+					precio-=1000;
+					ultimaModE=0;
+					
+					 txtPrecio.value=precio;
+					}
+				}
+			modificadoP=false;
+			precioExtra();
+			}
+			
+				
+		}
+		function sacarMarcaElegida(){
+	
+		marcaElegida=this.options[this.selectedIndex].text;
+		ponerPrecioMarca();		
+		ponerModelos();
+		}
+		
+		function ponerModelos(){
+	
+		modelos.options.length=0;
+			for (a=1;a<4;a++){
+				opcion=document.createElement("option");
+				opcion.text=marcaElegida+a;				
+				modelos.appendChild(opcion);
+			}
+		}
+		
+		function ponerPrecioMarca(){
+			switch(marcaElegida){
+				case "Renault":
+					precio1=12000;
+					break;
+				case "Peugeot":
+					precio1=13000;
+					break;
+				case "Seat":
+					precio1=14000;
+					break;		
+			}
+		}
+		function funcionHacerClickModelos(){
+	
+		if(modificado==false){
+		precio=precio1;
+			for(a=0;a<colores.length;a++){
+				if(colores[a].checked){
+					color=colores[a].value;
+					}
+				}
+			switch(modelos.selectedIndex){		
+			
+				case 0:			
+					precio+=500;
+					imagen.src="imagenes\\"+marcaElegida+modelos.selectedIndex+color+".jpg";
+					imagen.style="width:200px; height:200px";					
+					break;
+				case 1:
+					precio+=1000;
+					imagen.src="imagenes\\"+marcaElegida+modelos.selectedIndex+color+".jpg";
+					imagen.style="width:200px; height:200px";
+					break;
+				case 2:
+					precio+=1500;
+					imagen.src="imagenes\\"+marcaElegida+modelos.selectedIndex+color+".jpg";
+					imagen.style="width:200px; height:200px";
+					break;		
+			}
+				//color rojo
+					precio+=500;
+					ultimaMod=500;
+					modificado=true;
+			 		txtPrecio.value=precio;
+				
+		}
+		else {
+		for(a=0;a<colores.length;a++){
+				if(colores[a].checked){
+					color=colores[a].value;
+					}
+				}
+			switch(modelos.selectedIndex){		
+			
+				case 0:			
+					precio-=500;
+					imagen.src="imagenes\\"+marcaElegida+modelos.selectedIndex+color+".jpg";
+					imagen.style="width:200px; height:200px";
+					
+					break;
+				case 1:
+					precio-=1000;
+					imagen.src="imagenes\\"+marcaElegida+modelos.selectedIndex+color+".jpg";
+					imagen.style="width:200px; height:200px";
+					break;
+				case 2:
+					precio-=1500;
+					imagen.src="imagenes\\"+marcaElegida+modelos.selectedIndex+color+".jpg";
+					imagen.style="width:200px; height:200px";
+					break;		
+			}
+				modificado=false;
+				funcionHacerClickModelos();
+		}
+		
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		<form>
+			<h1> CONCESIONARIO </h1>
+			<h2> MARCA </h2>
+			<select id="marcas">
+				<option> Renault </option>
+				<option> Peugeot </option>
+				<option> Seat </option>
+			</select>
+			
+			<h2> MODELO </h2> 
+			<select id="modelos">
+				
+			</select>
+			
+			<h2> EXTRAS </h2>
+			<input type="radio" name="extra" value="si" required> Si<br>
+			<input type="radio" name="extra" value="no" required checked> No<br>
+			
+			<h2> Color </h2>
+			<input type="radio" name="colores" value="R" > Rojo<br>
+			<input type="radio" name="colores" value="B"> Blanco<br>
+			<input type="radio" name="colores" value="N"> Negro<br>
+			
+			<h2> Modelo elegido </h2>
+			<img  id="imag" src="" />
+			Precio:
+			<input type="text" id="precio">
+		</form>
+		
+	</body>
+</html>

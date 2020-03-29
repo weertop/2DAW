@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Concesionario</title>
+	<script src="concesionario.js"></script>
+	<style type="text/css">
+	
+		td{
+			padding:6px 20px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<h1>Concesionario</h1>
+	
+	<table>
+		
+		<tr>
+			<td>
+				<h4>Elige tu marca:</h4>
+				<select id="marcas">
+					<option> Elija marca.. </option>
+					<option value="Peugeot" name="marca">Peugeot</option>
+					<option value="Seat" name="marca">Seat</option>
+					<option value="Renault" name="marca">Renault</option>
+				</select>			
+			</td>
+			<td>
+				<h4>Elige el modelo:</h4>
+				<select id="modelos">
+		
+				</select>			
+			</td>
+			<td rowspan="3"><img src="" alt="" id="foto"></td>
+		</tr>
+
+		<tr>
+			<td>
+				<h4>Extras</h4>
+				<input type="radio" name="extras" value="s">Sí 
+				<br>
+				<input type="radio" name="extras" value="n">No 			
+			</td>
+			<td>
+				<h4>Colores</h4>
+				<input type="radio" name="colores" value="rojo"> Rojo
+				<br>
+				<input type="radio" name="colores" value="negro"> Negro
+				<br>
+				<input type="radio" name="colores" value="blanco"> Blanco
+				<br>			
+			</td>
+		</tr>	
+		<tr>
+			<td colspan="3">Precio: <input type="text" id="precio" disabled> </td>
+		</tr>
+
+	</table>
+	
+
+
+</body>
+</html>

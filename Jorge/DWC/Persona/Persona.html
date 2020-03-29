@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Persona</title>
+        <script>
+        //Constructor
+        function Persona(nombre, edad, dni, sexo, peso, altura ){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.dni = dni;
+            this.sexo = sexo;
+            this.peso = peso;
+            this.altura = altura;
+        }
+
+        var nombre=prompt("Introduzca nombre");
+        var edad=prompt("Introduzca edad");
+        var dni=prompt("Introduzca dni");
+        var sexo=prompt("Introduzca sexo ('H' o 'M')");
+        var altura=prompt("Introduzca altura (ej:1.60)");
+
+        function calcularIMC(){
+            var imc=(this.peso/(this.altura*this.altura));
+            if(imc<20){
+                return -1;
+            }else{
+                if(imc>20 && imc<25){
+                    return 0;
+                }else{
+                    return 1;
+                }
+            }
+        }
+
+        function esMayorDeEdad(){
+            if (this.edad>=18){
+                return true;
+            }
+        }
+
+        function comprobarSexo(sexo){
+            if (sexo!='M' && sexo !='H' ){
+                this.sexo=='H';
+            }
+        }
+
+        
+        </script>
+		
+		
+	</head>
+	<body>
+		
+</body></html>

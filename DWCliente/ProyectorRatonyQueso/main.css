@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#tabla{
+    width: max-content;
+    height: max-content;
+}
+td{
+    height: 100px;
+    width: 100px;
+}
+
+.reloj{
+    height: 20px;
+    width: 20px;
+}
+
+button{
+    background-color: aquamarine;
+    font-family: "Arial Black";
+    margin: 10px;
+    padding: 5px;
+}

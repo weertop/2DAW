@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Renfe</title>
+		<script>
+			var trenes = [];
+			function id(iden){return document.getElementById(iden);};
+			function name(namame){return document.getElementsByName(namame);};
+			function validHour(ha,hb){
+				var h1 = ha.split(":");
+				var h2 = hb.split(":");
+				return ( h1[0] >= 0 && h1[1] >= 0 && (h2[0] > h1[0] || h2[1] > h1[1]) && h2[0] >= 0 && h2[1] >= 0 );
+			};
+			function validCode(codimi){
+				return (codimi >= 0 && codimi <= trenes.length);
+			};
+			function valCheck(nameme){
+				var tip;
+				for(var i = 0; i < name(nameme).length;i++){
+					if(name(nameme)[i].checked == true){
+						tip = name(nameme)[i].value;
+					};
+				};
+				return tip;
+			};
+			function changeCheck(nameme, val){
+				for(var i = 0; i < name(nameme).length;i++){
+					if(name(nameme)[i].value == val){
+						name(nameme)[i].checked = true;
+					};
+				};
+			};
+			function loadInfo(event){
+				var event = event || window.event;
+				if(event.keyCode == 13){ // Enter is key 13
+					event.preventDefault();
+					if(validCode(this.value) && trenes[this.value] != undefined){
+						var element = trenes[this.value];
+						id("hsalida").value = element[0];
+						id("hentrada").value = element[1];
+						var tip = changeCheck("tipo", element[2]);
+						id("destino").value = element[3];
+						var cir = changeCheck("circulacion", element[4]);
+						alert("Informacion cargada");
+					};
+				};
+			};
+			function regInfo(){
+				var cod = id("codigo").value;
+				var out = id("hsalida").value;
+				var int = id("hentrada").value;
+				var tip = valCheck("tipo");
+				var des = id("destino").value;
+				var cir = valCheck("circulacion");
+				var err = "";
+				if(!validCode(cod)){
+					err += "Codigo invalido\n";
+				}
+				if(!validHour(out,int)){
+					err += "Tiempos invalido "+validHour(out,int)+"\n";
+				}
+				if(err == ""){
+					trenes[cod] = [out, int, tip, des, cir];
+					alert("Informacion registrada");
+				}else{
+					alert(err);
+				}
+			};
+			function delInfo(){
+				var  curDelete = confirm("¿Seguro que desea eliminar este registro?");
+				var cod = id("codigo").value;
+				if(curDelete && validCode(cod)){
+					delete trenes[cod];
+					alert("Informacion eliminada");
+				};
+			};
+			window.onload = function(){
+				id("codigo").onkeydown = loadInfo;
+				id("alta").onclick = regInfo;
+				id("baja").onclick = delInfo;
+			};
+		</script>
+	</head>
+	<body>
+		<form name="formulario">
+			Codigo Tren: <input type="text" id="codigo"><br><br>
+			Hora de Salida: <input type="time" id="hsalida"><br><br>
+			Hora de Entrada: <input type="time" id="hentrada"><br><br>
+			Tipo Tren: <input type="radio" id="talvia" name="tipo" value="alvia">Alvia
+					   <input type="radio" id="tave" name="tipo" value="ave">Ave
+					   <input type="radio" id="treg" name="tipo" value="regional">Regional
+					   <input type="radio" id="ttalgo" name="tipo" value="talgo">Talgo<br><br>
+			Destino: <select id="destino">
+						<option value="avila">Avila</option>
+						<option value="barcelona">Barcelona</option>
+						<option value="cuenca">Cuenca</option>
+						<option value="madrid">Madrid</option>
+						<option value="valencia">Valencia</option>
+					 </select><br><br>
+			Circulación: <input type="radio" id="cdia" name="circulacion" value="diaria">Diaria
+					     <input type="radio" id="clab" name="circulacion" value="laborales">Laborables
+					     <input type="radio" id="cfes" name="circulacion" value="festivos">Festivos<br><br>
+			<input type="button" id="alta" value="Dar de alta">
+			<input type="button" id="baja" value="Dar de baja">
+		</form>
+	
+	</body>
+</html>

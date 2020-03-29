@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>PARTIDOS</title>
+        <script src="ClasePartidos.js"> </script>
+		<script src="scriptPartidos.js"> </script>
+		
+	</head>
+	<body>
+		<form name="formulario">
+			PARTIDO Nº: <input type="text" id="numeroPartido"><br><br>
+		
+            EQUIPO 1: 
+            <select id="equipo1">
+						<option value="MADRID">MADRID</option>
+						<option value="BARCELONA">BARCELONA</option>
+						<option value="AT.MADRID">AT.MADRID</option>
+						<option value="ATH.BILBAO">ATH.BILBAO</option>
+                     </select> &nbsp;&nbsp;&nbsp;&nbsp;
+
+            EQUIPO 2: 
+            <select id="equipo2">
+						<option value="MADRID">MADRID</option>
+						<option value="BARCELONA">BARCELONA                      </option>
+						<option value="AT.MADRID">AT.MADRID</option>
+						<option value="ATH.BILBAO">ATH.BILBAO</option>
+                     </select> &nbsp;&nbsp;&nbsp;&nbsp;
+
+            CAMPO: 
+            <select id="campo">
+                <option value="bernabeu">BERNABEU</option>
+                <option value="campnou">CAMP NOU</option>
+                <option value="wanda">WANDA METROPOLITANO</option>
+                <option value="sanmames">SAN MAMES</option> <br><br>
+             </select> <br><br>
+
+            RESULTADO EQUIPO 1: <input type="text" id="resultadoEq1"> &nbsp;&nbsp;
+            RESULTADO EQUIPO 2: <input type="text" id="resultadoEq2"><br><br>
+
+			<input type="button" id="alta" value="ALTA">
+            <input type="button" id="ganador" value="GANADOR">
+            <input type="button" id="puntos" value="PUNTOS">
+            <input type="button" id="clasificacion" value="CLASIFICACION">
+		
+        </form>
+        
+        <div id="clasif">
+            <h1>CLASIFICACION</h1>
+
+        </div>
+	
+</body></html>

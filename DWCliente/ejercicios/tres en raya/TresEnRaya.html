@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>3 en raya</title>
+<style>
+table {border-collapse:collapse; margin:0 auto;}
+td, tr {height:100px; width:100px; border: 2px solid black;}
+</style>
+<script language="JavaScript" type="text/javascript">
+
+    var tdtag = document.getElementsByTagName("td");
+    var registro = new Array(9);
+    var posibleGanador;
+
+    var imagen;
+    var padre;
+
+    var turno = 1;
+
+    var gameOver = false;
+
+    window.onload = function(){
+		var table = document.getElementById('tabla');
+			if (table != null) {
+				for (var i = 0; i < table.rows.length; i++) {
+					for (var j = 0; j < table.rows[i].cells.length; j++)
+						table.rows[i].cells[j].onclick = creaImagen(i);
+				}
+			}
+    }
+
+    function creaImagen(casilla){
+
+        if(registro[casilla] == null){
+
+            imagen = document.createElement("img");
+
+            if(turno%2 == 0){
+                imagen.src = "img/o.jpg";
+                registro[casilla] = "o";
+                posibleGanador = "Jugador 'O'";
+             
+            }else{
+                imagen.src = "img/x.jpg";
+                registro[casilla] = "x";
+                posibleGanador = "Jugador 'X'";
+          
+            }
+
+            imagen.width = "100"; 
+            padre = document.getElementById(casilla); 
+            padre.appendChild(imagen); 
+
+            if(turno > 4)
+                comprobarGanador();
+            turno++;
+        }
+
+    }
+
+    function comprobarGanador(){
+        if(gameOver == false){
+
+            if(registro[0] == registro[1] && registro[1] == registro[2]) 
+                if(registro[0] != null){ 
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la primera fila");
+                    gameOver = true;
+                }
+
+            if(registro[3] == registro[4] && registro[4] == registro[5]) //segunda fila
+                if(registro[3] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la segunda fila");
+                    gameOver = true;
+                }
+
+            if(registro[6] == registro[7] && registro[7] == registro[8]) //tercera fila
+                if(registro[6] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la tercera fila");
+                    gameOver = true;
+                }
+
+            if(registro[0] == registro[3] && registro[3] == registro[6]) //primera col
+                if(registro[0] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la primera col");
+                    gameOver = true;
+                }
+
+            if(registro[1] == registro[4] && registro[4] == registro[7]) //segunda col
+                if(registro[1] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la segunda col");
+                    gameOver = true;
+                }
+
+            if(registro[2] == registro[5] && registro[5] == registro[8]) //tercera col
+                if(registro[2] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la tercera col");
+                    gameOver = true;
+                }
+
+            if(registro[0] == registro[4] && registro[4] == registro[8]) //diag 1
+                if(registro[0] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la primera diagonal");
+                    gameOver = true;
+                }
+
+            if(registro[6] == registro[4] && registro[4] == registro[2]) //diag 2
+                if(registro[6] != null){
+                    alert("Gana el " + posibleGanador + " con un 3 en raya en la segunda diagonal");
+                    gameOver = true;
+                }
+        
+        }
+    }
+
+</script>
+
+<body>
+
+<table id="tabla">
+    <tr>
+        <td id="0"></td>
+        <td id="1"></td>
+        <td id="2"></td>
+    </tr>
+    <tr>
+        <td id="3"></td>
+        <td id="4"></td>
+        <td id="5"></td>
+    </tr>
+    <tr>
+        <td id="6"></td>
+        <td id="7"></td>
+        <td id="8"></td>
+    </tr>
+</table>
+
+<p><a href="">Reiniciar</a></p>
+</body>
+</html>

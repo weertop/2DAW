@@ -1,0 +1,39 @@
+												punto net
+1 enableviewstate hay que ponerlo a true porque sino en cada postback se perderia los datos enviados al hacer postback, en los ejemplos anteriores los ponia automaticamnte 
+2 System.web.ui.webcontrols.textbox caja  se pone la ruta completa porque al usar messagebox using no sabe a cual se refiere despues y por eso se añade
+3 c.text cuando hacemos un postback todos los controles que se crean en tiempo de ejecuccion se borran, asi que debemos hacer es el ispostback al inicio del condigo y volvemos a crear las cajas de texto
+  Antes de crear otra vez los controles se deberian borrar los anteriores (textbox2_textchanged)
+4 Para buscar cosas creadas en tiempo de ejecccion se debe hacer con el Textbox c = (TextBox) FindControl(nombre);
+5 Con el var indice = recetas.IndexOf(listBox1.text) podemos buscar por el nombre del que se pulse en la listbox en el metodod ListBox1_selectedIndexChanged
+6 los controles HTML no hacen postabck al refrescar la pagina???"????/
+  
+
+
+												PUNTO NET
+
+	
+	
+Desarrollor de aplicaciones Web-------->
+	Si es SQL server de microsoft no se debe añadir librerias, si es MYSQL se debe añadir libreria
+	Pasos a aseguir:
+	1. Incluir libreria
+	2. Crear BBDD desde mysql
+	3. Poner en ejecucion el apache y el mysql 
+	4. Poner using mysql.data y using mysqldata mysqlcliente
+	5. Objecto Conexion --->"cadena de conexion"
+	6. Objeto command ----> sentencia sql (insert, delete, select, update)
+	7. crear los paremetros necesarios 
+	8. abrir la conexion
+	9. ejectuar el comando ----> depende del comando si es insert, update, delete no devuelve nada (se ejecuta con executenonquery()) y el select executeReader() objecto static DateReader ExecuteScalar si vamos a recibir datos como por ejemplo un select count(*))
+	10. cerrar la conexion
+	
+En Bin se pone agragar->elemento existente->buscar la caprtea mysql ->v.5-> agragar .data y .web 
+Using MySql.Data;
+Using MySql.Data.MySqlClient;
+
+
+One Millon Pepito 23
+Hikaido Atacada Por Godzilla 89
+Nairobi 
+Hunan 
+MontCarlo Atacada God 89 =

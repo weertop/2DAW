@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Concesionario SM</title>
+
+</head>
+
+<body>
+	<form name="formulario" id="form">
+		<label><h3>Marca: </h3><select name="marca" id="marca">
+			<option>---</option>
+		</select></label><br/>
+		<label><h3>Modelo: </h3><select name="modelo" id="modelo">
+			<option>---</option>
+		</select></label><br/>
+		<h3>Extras</h3>
+		<input type="radio" name="extra" value="1000" checked/> sí&nbsp;&nbsp;
+		<input type="radio" name="extra" value="0"/> no<br/><br/>
+	</form>
+	<script>
+		window.onload = function(){
+			coches = [["peugeot",["208","12500"],["308","13000"],["508","13500"]],
+				["renault",["Clio","13500"],["Espace","14000"],["Scenic","14500"]],
+				["seat",["Alhambra","14500"],["Ateca","15000"],["Ibiza","15500"]]];
+				
+			colores = [["negro",700],["rojo",500],["blanco",0]];
+			
+			marquita = document.getElementById("marca");
+			//creacion de elementos
+			for( var i = 0; i < coches.length; i++){
+				var dentro = document.createTextNode(coches[i][0]);
+				var opcion = document.createElement("option");
+				opcion.value = coches[i][0];
+				opcion.appendChild(dentro);
+				marquita.appendChild(opcion);
+			}
+			for( var i = 0; i < colores.length; i++){
+				var dentro = document.createTextNode(" " +colores[i][0]+ "   ");
+				var radio = document.createElement("input");
+				var label = document.createElement("label");
+				( i == 0)?(radio.checked = true):"";
+				radio.type = "radio";
+				radio.name = "color";
+				radio.value = i;
+				label.appendChild(radio);
+				label.appendChild(dentro);
+				document.getElementById("form").appendChild(label);
+			}
+			marquita.onchange = function(){model(); precios()};
+			var resp = document.createTextNode("El precio del coche es: ");
+			var parra = document.createElement("p");
+			span = document.createElement("span");
+			parra.appendChild(resp);
+			parra.appendChild(span);
+			document.getElementById("form").appendChild(parra);
+			fotillo = document.createElement("img");
+			fotillo.id = "fotos";
+			fotillo.src = "imagenes/Concesionario Lugauto_15_970x597.jpg";
+			fotillo.style = "width:600px";
+			document.getElementById("form").appendChild(fotillo);
+			//llamadas a las funciones de cambiar precio
+			models = document.getElementById("modelo");
+			models.onchange = precios;
+			extras = document.getElementsByName("extra");
+			for( var i = 0; i < extras.length; i++){
+				extras[i].onclick = precios;
+			}
+			colors = document.getElementsByName("color");
+			for( var i = 0; i < colors.length; i++){
+				colors[i].onclick = precios;
+			}
+			
+		}
+		
+		function precios(){
+			for( var i = 0; i < coches.length; i++){
+				if( marquita.options[marquita.selectedIndex].text == coches[i][0]){
+					for( var j = 1; j < coches[i].length; j++){
+						if(models.options[models.selectedIndex].text == coches[i][j][0]){
+							precio = coches[i][j][1];
+							imagen = "imagenes/"+i+(j-1);
+						}
+					}
+				}
+			}
+			for( var i = 0; i < colors.length; i++){
+				if(colors[i].checked){
+					precio = eval( parseInt(precio) + parseInt(colores[i][1]));
+					imagen += i+".jpg";
+				}
+			}
+			var extrass = document.getElementsByName("extra");
+			for( var i = 0; i < extrass.length; i++){
+				if(extrass[i].checked){
+					precio = eval( parseInt(precio) + parseInt(extrass[i].value));
+				}
+			}
+			fotillo.src = imagen;
+			span.innerHTML = precio;
+		}
+		
+		function model(){
+			marcas = document.getElementById("marca");
+			modelos = document.getElementById("modelo");
+			modelos.options.length = 1;
+			modelos.options[0].text = "---";
+			var seleccionado = marcas.selectedIndex
+			var texto = marcas.options[seleccionado].text;
+			for( var i = 0; i < coches.length; i++){
+				if(texto == coches[i][0]){
+				modelos.options.length = 0;
+					for( var j = 1; j < coches[i].length ; j++){
+						var dentro = document.createTextNode(coches[i][j][0]);
+						var opcion = document.createElement("option");
+						opcion.value = coches[i][j][0];
+						opcion.appendChild(dentro);
+						modelos.appendChild(opcion);
+					}
+				}
+			}
+		}
+		
+		
+		
+	</script>
+</body>
+</html>

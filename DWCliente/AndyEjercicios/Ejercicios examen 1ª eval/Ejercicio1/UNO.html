@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>EJERCICIO 1</title> 
+             
+         <script type="text/javascript" >
+		 var negro=false;
+		 window.onload = function(){
+			document.getElementById("anadir").onclick = ANADIRP;
+			document.getElementById("borrar").onclick = BORRARP;
+			document.getElementById("negrita").onclick = NEGRITAP;
+		}
+		
+		function NEGRITAP(){
+		negro=true;
+		}
+		function ANADIRP(){
+		var div1=document.getElementById("contenedor");
+		var texto=prompt("introduce el texto del párrafo");
+		if (negro){
+			var neg=document.createElement("strong");
+			var contenido=document.createTextNode(texto);
+			neg.appendChild(contenido);
+			var parrafo=document.createElement("p");
+			
+			parrafo.appendChild(neg);
+			div1.appendChild(parrafo);
+			
+			negro=false
+			
+		}
+		else{
+		
+			var contenido=document.createTextNode(texto);
+			
+			var parrafo=document.createElement("p");
+			
+			parrafo.appendChild(contenido);
+			div1.appendChild(parrafo);
+			
+			
+		}
+		
+		}
+		function BORRARP(){
+			var parrafos=document.getElementsByTagName("p");
+			
+			var contador=parrafos.length-1;
+				
+			parrafos[contador].parentNode.removeChild(parrafos[contador]);
+		
+		}
+
+		 </script>
+    </head>
+        <body>
+          
+          <div id="contenedor">
+             <div id="botones">
+				<input type="button" id="anadir" value="AÑADIR PARRAFO">
+				<input type="button" id="negrita" value="NEGRITA">
+				<input type="button" id="borrar" value="BORRAR PARRAFO">
+              </div>
+			  
+          </div>    
+          
+        </body>
+</html>

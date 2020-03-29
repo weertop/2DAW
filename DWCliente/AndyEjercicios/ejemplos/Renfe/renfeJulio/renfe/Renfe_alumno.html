@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)file:///C:/Users/Teo/Documents/DWC/ejercicios%20alumnos/trenes/ejtreneslauraynerea/renfe_lauraynerea.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Renfe</title>
+		<script> 
+		window.onload = function() {
+		
+		var btnAlta=document.getElementById("alta");
+		var btnBaja=document.getElementById("baja");
+		document.onkeypress=empezar;
+		datos=[];
+		btnAlta.onclick=darAlta;
+		btnBaja.onclick=darBaja;	
+		}
+		
+		
+		function empezar(elEvento){
+			var evento = elEvento || window.event;
+		    var caracter = evento.charCode || evento.keyCode;
+			var letra = String.fromCharCode(caracter);
+			var codigo1 = letra.charCodeAt(0);
+				if(codigo1==13){
+				evento.preventDefault();
+				
+				leerDatos();
+				codigot=codigo.value;
+				limpiar();
+				
+					for(var a=0;a<datos.length;a++){
+						if(datos[a][0]==codigot){						
+							hsalida.value=datos[a][1];
+							hllegada.value=datos[a][2];
+							
+							for(var i=0;i<tipos.length;i++){
+								if(tipos[i].value==datos[a][3]){
+									tipos[i].checked=true;
+								}
+							}														
+							document.getElementById("destino").value=datos[a][4];
+							for(var b=0;b<circulaciones.length;b++){
+								if(circulaciones[b].value==datos[a][5]){
+									circulaciones[b].checked=true;
+								}
+							}
+						}
+					}					
+				}	
+		}
+				
+		
+				
+				
+				
+				
+				
+		function leerDatos(){
+			codigo=document.getElementById("codigo");
+			hsalida=document.getElementById("hsalida");
+			hllegada=document.getElementById("hllegada");
+			destino=document.getElementById("destino").options[document.getElementById("destino").selectedIndex];
+			circulaciones=document.getElementsByName("circulacion");
+			tipos=document.getElementsByName("tipo");
+			for(var a=0;a<circulaciones.length;a++){
+				if(circulaciones[a].checked){
+					circulacion=circulaciones[a];
+				}
+			}
+		
+			for(var a=0;a<tipos.length;a++){
+				if(tipos[a].checked){
+					tipo=tipos[a];
+				}
+			}
+		}
+		
+		function limpiar(){
+			codigo.value="";
+			hsalida.value="";
+			hllegada.value="";
+			tipo.checked=false;
+			document.getElementById("destino").options.selectedIndex=0;
+			circulacion.checked=false;
+		}
+		
+		
+		function darAlta(){
+		leerDatos();
+		var registrado=false;
+			for(var a=0;a<datos.length;a++){
+				if(datos[a][0]==codigo.value){
+				alert("Este codigo ya existe");
+				registrado=true;
+				}
+			}
+			if(registrado==false){			
+			datos.push(new Array(codigo.value,hsalida.value,hllegada.value,tipo.value,destino.value,circulacion.value));
+			limpiar();
+			}		
+		}
+		
+		function darBaja(){
+		leerDatos();
+			for(var a=0;a<datos.length;a++){
+				if(datos[a][0]==codigo.value){
+					datos.splice(a,1);						
+					limpiar();
+					alert("Registro Borrado");
+				}			
+			}
+		}
+		
+		</script>
+		
+	</head>
+	<body>
+		<form name="formulario">
+			Codigo Tren: <input type="text" id="codigo"><br><br>
+			Hora de Salida: <input type="time" id="hsalida"><br><br>
+			Hora de Llegada: <input type="time" id="hllegada"><br><br>
+			Tipo Tren: <input type="radio" id="talvia" name="tipo" value="alvia">Alvia
+					   <input type="radio" id="tave" name="tipo" value="ave">Ave
+					   <input type="radio" id="treg" name="tipo" value="regional">Regional
+					   <input type="radio" id="ttalgo" name="tipo" value="talgo">Talgo<br><br>
+			Destino: <select id="destino">
+						<option value="avila">Avila</option>
+						<option value="barcelona">Barcelona</option>
+						<option value="cuenca">Cuenca</option>
+						<option value="madrid">Madrid</option>
+						<option value="valencia">Valencia</option>
+					 </select><br><br>
+			Circulación: <input type="radio" id="cdia" name="circulacion" value="diaria">Diaria
+					     <input type="radio" id="clab" name="circulacion" value="laborales">Laborables
+					     <input type="radio" id="cfes" name="circulacion" value="festivos">Festivos<br><br>
+			<input type="button" id="alta" value="Dar de alta">
+			<input type="button" id="baja" value="Dar de baja">
+		
+		</form>
+	
+</body></html>

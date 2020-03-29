@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Ejercicio 1</title>
+		<script>
+			var nombres=new Array();
+			var provincias=new Array();
+			var edades=new Array();
+			var pos=0;
+			window.onload = function() {
+				setInterval(muestraReloj, 1000);
+				var guardar=document.getElementById("guardar");
+					guardar.onclick=guardado;
+				var buscar=document.getElementById("buscar");
+					buscar.onclick=buscado;
+			}
+			function muestraReloj() {
+			  var fechaHora = new Date();
+			  var horas = fechaHora.getHours();
+			  var minutos = fechaHora.getMinutes();
+			  var segundos = fechaHora.getSeconds();
+			 
+			  if(horas < 10) { horas = '0' + horas; }
+			  if(minutos < 10) { minutos = '0' + minutos; }
+			  if(segundos < 10) { segundos = '0' + segundos; }
+ 
+			document.getElementById("hora").value = horas+':'+minutos+':'+segundos;
+			document.getElementById("fecha").value = (fechaHora.getDate() + "/" + (fechaHora.getMonth() +1) + "/" + fechaHora.getFullYear());
+			}
+			function guardado(){
+				encontrado=false;
+				nombre=document.getElementById("nombre").value;
+				provincia=document.getElementById("provincia").value;
+				edad=document.getElementById("edad").value;
+				if(edad!="" && nombre!=""&& provincia!=""){
+					if(nombres.length==0){
+						nombres[pos]=nombre;
+						provincias[pos]=provincia;
+						edades[pos]=edad;
+						pos++;
+					}
+					else{
+						for(var i=0;i<nombres.length;i++){
+							if(nombre==nombres[i]){
+								encontrado=true;
+								break;
+							}							
+						}
+						if(encontrado){
+							alert("El nombre  ya ha sido introducido");
+						}
+						else{
+							nombres[pos]=nombre;
+							provincias[pos]=provincia;
+							edades[pos]=edad;
+							pos++;
+							//alert("Nombre introducido");
+						}
+					}
+				}
+				else{
+					alert ("Tienes que introducir todos los datos");
+				}
+				document.getElementById("nombre").value="";
+				document.getElementById("provincia").value="";
+				document.getElementById("edad").value="";
+			}
+			function buscado(){
+				encontrado=false;				
+				if(nombres.length!=0){	
+					nombre=document.getElementById("nombre").value;				
+						if(nombre!=""){
+							for(var i=0;i<nombres.length;i++){
+								if(nombre==nombres[i]){
+								encontrado=true;
+								posicion=i;
+								break;
+								}
+							}
+							if(encontrado){
+								document.getElementById("provincia").value=provincias[posicion];
+								document.getElementById("edad").value=edades[posicion];
+							}
+							else{
+								alert("Nombre no encontrado");
+							}
+						}
+						else{
+							alert("Tienes que introducir algun nombre");
+						}
+				}
+				else{
+					alert("Tienes que introducir algun valor antes");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table>
+			<form>
+				<tr>
+					<td>Fecha actual:</td>
+					<td><input type="text" id="fecha" /></td>
+				</tr>
+				<tr>
+					<td>Hora:</td>
+					<td><input type="text" id="hora" /></td>
+				</tr>
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" id="nombre"  /></td>
+				</tr>
+				<tr>
+					<td>Provincia:</td>
+					<td><input type="text" id="provincia" /></td>
+				</tr>
+				<tr>
+					<td>Edad:</td>
+					<td><input type="text" id="edad"/></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="guardar" value="Guardar"  /></td>
+					<td><input type="button" id="buscar" value="Buscar"  /></td>
+				</tr>
+			</form>
+		</table>
+	</body>
+</html>

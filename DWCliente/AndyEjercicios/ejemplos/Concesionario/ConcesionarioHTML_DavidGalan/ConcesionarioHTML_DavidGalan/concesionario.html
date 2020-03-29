@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF.8" />
+		<title></title>
+		<script>
+			function id(e){return document.getElementById(e);};
+			var tot = [500,0,1000];
+			concesionario = [
+				["Peugeot",["108","13500"],["208","14000"],["308","14500"]],
+				["Renault",["Captur","12500"],["Talisman","13000"],["Clio","13500"]],
+				["Seat",["Leon","14500"],["Ibiza","15000"],["Toledo","15500"]]
+			];
+			colores = [
+				["Rojo","500"],
+				["Blanco","0"],
+				["Negro","700"]
+			];
+			window.onload = function(){
+				concesionario.forEach(function(val,key){
+					var option = document.createElement("option");
+					option.setAttribute("value", key);
+					var text = document.createTextNode(val[0]);
+					option.appendChild(text);
+					id("lsMarca").appendChild(option);
+				});
+				id("lsMarca").onchange = function(){
+								loadModels(this.value);
+								id("showVeh").src = "Fotillos/"+concesionario[this.value][0]+"-"+concesionario[this.value][1][0]+".jpg";
+								tot[1] = concesionario[this.value][1][1];extra();
+							};
+
+				colores.forEach(function(val,key){
+					var lbCol = document.createElement("label");
+					var inCol = document.createElement("input");
+					var text = document.createTextNode(val[0]);
+					lbCol.appendChild(inCol);
+					lbCol.appendChild(text);
+					inCol.setAttribute("value", key);
+					inCol.setAttribute("type", "radio");
+					inCol.setAttribute("name", "col");
+					id("color").appendChild(lbCol);
+				});
+				document.getElementsByName('col')[0].checked = true;
+				for(var i = 0; i < document.getElementsByName('col').length;i++){
+					document.getElementsByName('col')[i].onclick = function(){
+											tot[0] = colores[parseInt(this.value)][1];extra();
+										};
+				};
+				for(var i = 0; i < document.getElementsByName('rExtra').length;i++){
+					document.getElementsByName('rExtra')[i].onclick = function(){
+											tot[2] = (this.value == 'si')?1000:0;extra();
+										};
+				};
+			};
+			function loadModels(sel){
+				id("lsModelo").options.length = 0;
+				if(sel == "n"){
+					var option = document.createElement("option");
+					option.setAttribute("value", "");
+					var text = document.createTextNode("---");
+					option.appendChild(text);
+					id("lsModelo").appendChild(option);
+				}
+				for(var i = 1;i < concesionario[sel].length;i++){
+					var option = document.createElement("option");
+					option.setAttribute("value", i-1);
+					text = document.createTextNode(concesionario[sel][i][0]);
+					option.appendChild(text);
+					id("lsModelo").appendChild(option);
+				};
+				var cMarca = id("lsMarca").options[id("lsMarca").selectedIndex].value;
+				id("lsModelo").onchange = function(){
+								id("showVeh").src = "Fotillos/"+concesionario[cMarca][0]+"-"+concesionario[cMarca][parseInt(this.value)+1][0]+".jpg";
+								tot[1] = concesionario[cMarca][parseInt(this.value)+1][1];
+								extra();
+							};
+			}
+			function extra(){
+				id('tot').value = 0;
+				for(var i = 0; i< tot.length;i++){
+					id('tot').value = parseInt(parseInt(id('tot').value) + parseInt(tot[i]));
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<form action="#">
+			<h1>Concesionario</h1>
+			<h2>Marca</h2>
+			<select id="lsMarca">
+				<option value="n">---</option>
+			</select>
+			<h2>Modelo</h2>
+			<select id="lsModelo">
+				<option value="">---</option>
+			</select>
+			<h2>Extras</h2>
+			<input type="radio" name="rExtra" value="si" checked />Si&nbsp;&nbsp;|
+			<input type="radio" name="rExtra" value="no" />No
+			<h2>Color</h2>
+			<div id="color"></div><hr />
+			Precio: <input type="number" id="tot" value="0" readonly /><br />
+			<img src="Fotillos/debut-light.png" width="200" alt="vehi" id="showVeh" />
+		</form>
+	</body>
+</html>
